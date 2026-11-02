@@ -1,0 +1,5 @@
+# Il sito è pubblico: i motori di ricerca possono indicizzare tutto tranne la pagina "non trovata"
+User-agent: *
+Disallow: /page-not-found/
+
+Sitemap: https://pd6.it/sitemap.xml

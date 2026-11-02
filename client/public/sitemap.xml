@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pagine del sito per i motori di ricerca. Aggiungere qui ogni nuova pagina (vedi README). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://pd6.it/</loc>
+  </url>
+  <url>
+    <loc>https://pd6.it/chi-siamo/</loc>
+  </url>
+  <url>
+    <loc>https://pd6.it/missione/</loc>
+  </url>
+  <url>
+    <loc>https://pd6.it/cammino/</loc>
+  </url>
+  <url>
+    <loc>https://pd6.it/contatti/</loc>
+  </url>
+</urlset>

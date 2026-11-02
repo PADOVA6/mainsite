@@ -11,7 +11,8 @@
     "useEnglish": "Passa all'inglese",
     "useItalian": "Passa all'italiano",
     "useLight": "Passa al tema chiaro",
-    "useDark": "Passa al tema scuro"
+    "useDark": "Passa al tema scuro",
+    "mission": "Missione"
   },
   "home": {
     "skip": "Vai al contenuto",
@@ -62,6 +63,11 @@
           "title": "Contatti",
           "text": "Dove trovarci, come scriverci e dove seguirci.",
           "cta": "Scrivici"
+        },
+        "mission": {
+          "title": "La nostra missione",
+          "text": "Lo scopo dell’AGESCI, la Legge, la Promessa e i motti scout.",
+          "cta": "Scopri i nostri valori"
         }
       }
     }
@@ -109,6 +115,88 @@
       "title": "I capi",
       "text": "I capi sono educatori volontari, formati con i percorsi dell’AGESCI. Ogni unità ha i suoi capi, che preparano le attività e seguono la crescita di ciascun ragazzo.",
       "community": "Insieme formano la Comunità Capi, che guida il gruppo e ne scrive il progetto educativo."
+    }
+  },
+  "mission": {
+    "title": "La nostra missione",
+    "lead": "Perché facciamo scoutismo e in cosa crediamo: i valori dell’AGESCI che viviamo nel Padova 6.",
+    "purpose": {
+      "title": "Lo scopo",
+      "quote": "Contribuire, secondo il principio dell’autoeducazione, alla crescita dei ragazzi come persone significative e felici.",
+      "source": "Patto associativo AGESCI",
+      "text": "Autoeducazione vuol dire che ragazze e ragazzi sono protagonisti della propria crescita: scoprono, provano e scelgono, con i capi accanto. Ogni attività del gruppo, dalla caccia del Branco al servizio del Clan, nasce da questo scopo."
+    },
+    "choices": {
+      "title": "Le tre scelte",
+      "intro": "Il Patto associativo è il documento a cui aderiscono tutti i capi dell’AGESCI. Si regge su tre scelte.",
+      "scout": {
+        "title": "Scelta scout",
+        "text": "«I capi testimoniano l’adesione personale alla Legge e alla Promessa scout.» E propongono ai ragazzi il metodo scout, in cui il gioco, l’avventura e la scoperta diventano occasioni per crescere."
+      },
+      "christian": {
+        "title": "Scelta cristiana",
+        "text": "I capi accolgono il messaggio di Cristo e lo testimoniano con la propria vita. Nel gruppo la fede si vive insieme, nella comunità e nella parrocchia."
+      },
+      "political": {
+        "title": "Scelta politica",
+        "text": "«La scelta di azione politica è impegno irrinunciabile che ci qualifica in quanto cittadini»: educare a partecipare in modo attivo e responsabile alla cura del bene comune."
+      }
+    },
+    "law": {
+      "title": "La Legge scout",
+      "intro": "La Legge dice in parole semplici come vive una guida o uno scout. Nell’AGESCI è fatta di dieci articoli.",
+      "subject": "La guida e lo scout:",
+      "a1": "pongono il loro onore nel meritare fiducia;",
+      "a2": "sono leali;",
+      "a3": "si rendono utili ed aiutano gli altri;",
+      "a4": "sono amici di tutti e fratelli di ogni altra guida e scout;",
+      "a5": "sono cortesi;",
+      "a6": "amano e rispettano la natura;",
+      "a7": "sanno obbedire;",
+      "a8": "sorridono e cantano anche nelle difficoltà;",
+      "a9": "sono laboriosi ed economi;",
+      "a10": "sono puri di pensieri, parole e azioni.",
+      "pack": {
+        "title": "La Legge del Branco",
+        "intro": "I lupetti hanno una Legge propria, in due articoli:",
+        "a1": "Il lupetto pensa agli altri come a se stesso.",
+        "a2": "Il lupetto vive con gioia e lealtà insieme al Branco."
+      }
+    },
+    "promise": {
+      "title": "La Promessa",
+      "intro": "Con la Promessa ognuno sceglie liberamente di impegnarsi a vivere la Legge. Esploratori e guide la pronunciano con queste parole:",
+      "opening": "Con l’aiuto di Dio, prometto sul mio onore di fare del mio meglio:",
+      "p1": "per compiere il mio dovere verso Dio e verso il mio Paese;",
+      "p2": "per aiutare gli altri in ogni circostanza;",
+      "p3": "per osservare la Legge scout.",
+      "pack": "I lupetti hanno una formula propria: «Prometto, con l’aiuto e l’esempio di Gesù, di fare del mio meglio per migliorare me stesso, per aiutare gli altri, per osservare la Legge del Branco.»"
+    },
+    "mottos": {
+      "title": "I motti",
+      "intro": "Ogni branca ha il suo motto. Quello dell’associazione è «Sii preparato».",
+      "pack": {
+        "motto": "Del nostro meglio",
+        "who": "Lupetti"
+      },
+      "troop": {
+        "motto": "Sii preparato",
+        "who": "Esploratori e guide"
+      },
+      "clan": {
+        "motto": "Servire",
+        "who": "Rover e scolte"
+      }
+    },
+    "bp": {
+      "quote": "Cercate di lasciare questo mondo un po’ migliore di quanto non l’avete trovato.",
+      "source": "Robert Baden-Powell, fondatore dello scoutismo, nel suo ultimo messaggio agli esploratori"
+    },
+    "sources": {
+      "label": "Fonti:",
+      "rules": "Legge, Promessa e motti dal",
+      "pact": "scopo e scelte dal Patto associativo AGESCI.",
+      "rulesLink": "Regolamento metodologico AGESCI (aggiornato al Consiglio generale 2026);"
     }
   },
   "path": {

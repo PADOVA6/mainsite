@@ -65,6 +65,7 @@ mainsite/
 |---|---|
 | `/` | Home: testata, presentazione breve con i numeri del gruppo, anteprime delle pagine |
 | `/chi-siamo` | Storia del gruppo, metodo scout, i capi (`pages/about`) |
+| `/missione` | Lo scopo dell'AGESCI, le tre scelte del Patto associativo, la Legge scout, la Promessa, i motti, la citazione di Baden-Powell (`pages/mission`) |
 | `/cammino` | Le tre tappe, le cinque unità, quando ci troviamo, come unirsi (`pages/path`) |
 | `/contatti` | Dove ci troviamo, Scrivici (email, PEC, pagina sul sito della parrocchia), Seguici (`pages/contact`) |
 | `/page-not-found` | Pagina "non trovata" |
@@ -79,6 +80,12 @@ Il footer resta in fondo alla finestra anche nelle pagine con poco contenuto (`a
 
 I profili social della pagina Contatti sono un elenco in `contact-page.ts`: per aggiungerne uno
 basta una riga con nome, indirizzo e icona di PrimeIcons.
+
+I testi di Legge, Promessa e motti nella pagina Missione sono quelli del
+[Regolamento metodologico AGESCI](https://www.agesci.it/download/statuto_patto_associativo_e_regolamenti/Regolamento-metodologico-2026.pdf)
+(aggiornato al Consiglio generale 2026); scopo e scelte vengono dal Patto associativo. Le
+traduzioni inglesi sono nostre. Le animazioni usano la direttiva `RevealOnScroll`
+(`src/app/shared`): senza JavaScript o con il movimento ridotto il contenuto è visibile subito.
 
 Le date della storia del gruppo vengono dalla
 [pagina del gruppo su ScoutWiki](https://it.scoutwiki.org/Padova_6_AGESCI), che la pagina cita.

@@ -13,6 +13,7 @@ export class HomeIntro {
   // Anteprime delle pagine interne: la home non ne ripete il contenuto
   protected readonly cards = [
     { key: 'about', link: '/chi-siamo' },
+    { key: 'mission', link: '/missione' },
     { key: 'path', link: '/cammino' },
     { key: 'contacts', link: '/contatti' },
   ];

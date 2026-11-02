@@ -21,16 +21,18 @@ Non sono ancora configurati runner per test unitari o end-to-end.
   e [HomeIntro](src/app/pages/home/home-intro/home-intro.ts), con presentazione, numeri del gruppo
   e schede che portano alle pagine interne.
 - [AboutPage](src/app/pages/about/about-page.ts): storia, metodo scout, capi.
+- [MissionPage](src/app/pages/mission/mission-page.ts): scopo, tre scelte, Legge (una corda con un
+  nodo per articolo che si disegna allo scorrimento), Promessa, motti e citazione di Baden-Powell.
 - [PathPage](src/app/pages/path/path-page.ts): tappe del cammino
   ([ScoutPath](src/app/pages/path/scout-path/scout-path.ts), con il tracciato SVG decorativo),
   unità, orari e invito a contattarci.
 - [ContactPage](src/app/pages/contact/contact-page.ts): dove ci troviamo, scrivici, seguici.
   I profili social sono un elenco nel componente.
-- [RevealOnScroll](src/app/pages/path/scout-path/reveal-on-scroll.ts) gestisce
-  l'animazione del percorso con cleanup dell'observer e rispetto del movimento ridotto.
+- [RevealOnScroll](src/app/shared/reveal-on-scroll.ts) gestisce
+  le animazioni allo scorrimento (soglia regolabile con `revealThreshold`) con cleanup dell'observer e rispetto del movimento ridotto.
 - [SiteFooter](src/app/layout/site-footer/site-footer.ts) appartiene al layout comune:
   mantiene testi italiani, collegamenti e stili del footer HTML originale, anche nelle altre lingue.
-- [SiteNavbar](src/app/layout/site-navbar/site-navbar.ts) offre link alle pagine Chi siamo, Il cammino e Contatti,
+- [SiteNavbar](src/app/layout/site-navbar/site-navbar.ts) offre link alle pagine Chi siamo, Missione, Il cammino e Contatti,
   il solo logo, un pulsante lingua che mostra la destinazione EN/IT
   e un pulsante con la sola icona sole/luna per il tema chiaro/scuro.
   Entrambi hanno etichette accessibili e tooltip che descrivono l'azione.

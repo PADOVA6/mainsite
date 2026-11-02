@@ -1,0 +1,112 @@
+<ng-container *transloco="let t; prefix: 'mission'">
+  <header class="testata-pagina">
+    <div class="wrap">
+      <h1>{{ t('title') }}</h1>
+      <p class="lead">{{ t('lead') }}</p>
+    </div>
+  </header>
+  <div class="corda" aria-hidden="true"></div>
+  <main id="contenuto" tabindex="-1">
+    <section class="sezione sezione--lavanda" aria-labelledby="scopo-titolo">
+      <div class="wrap">
+        <h2 id="scopo-titolo">{{ t('purpose.title') }}</h2>
+        <figure class="citazione" appRevealOnScroll>
+          <blockquote>
+            <p>{{ t('purpose.quote') }}</p>
+          </blockquote>
+          <figcaption>{{ t('purpose.source') }}</figcaption>
+        </figure>
+        <p>{{ t('purpose.text') }}</p>
+      </div>
+    </section>
+
+    <section class="sezione" aria-labelledby="scelte-titolo">
+      <div class="wrap">
+        <h2 id="scelte-titolo">{{ t('choices.title') }}</h2>
+        <p>{{ t('choices.intro') }}</p>
+        <ul class="scelte" appRevealOnScroll>
+          @for (choice of choices; track choice; let i = $index) {
+            <li class="scheda" [class]="'scelta--' + choice" [style.--i]="i">
+              <h3>{{ t('choices.' + choice + '.title') }}</h3>
+              <p>{{ t('choices.' + choice + '.text') }}</p>
+            </li>
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="sezione sezione--lavanda" aria-labelledby="legge-titolo">
+      <div class="wrap">
+        <h2 id="legge-titolo">{{ t('law.title') }}</h2>
+        <p>{{ t('law.intro') }}</p>
+        <div class="legge-griglia">
+          <div>
+            <p class="soggetto">{{ t('law.subject') }}</p>
+            <!-- La Legge come una corda con un nodo per articolo -->
+            <ol class="legge" appRevealOnScroll [revealThreshold]="0.15">
+              @for (article of law; track article; let i = $index) {
+                <li [style.--i]="i">
+                  <span class="nodo" aria-hidden="true">{{ i + 1 }}</span>
+                  <span class="articolo">{{ t('law.' + article) }}</span>
+                </li>
+              }
+            </ol>
+          </div>
+          <aside class="scheda legge-branco" aria-labelledby="branco-titolo">
+            <h3 id="branco-titolo">{{ t('law.pack.title') }}</h3>
+            <p>{{ t('law.pack.intro') }}</p>
+            <p class="articolo-branco">{{ t('law.pack.a1') }}</p>
+            <p class="articolo-branco">{{ t('law.pack.a2') }}</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="sezione" aria-labelledby="promessa-titolo">
+      <div class="wrap">
+        <h2 id="promessa-titolo">{{ t('promise.title') }}</h2>
+        <p>{{ t('promise.intro') }}</p>
+        <blockquote class="promessa" appRevealOnScroll>
+          <p class="apertura">{{ t('promise.opening') }}</p>
+          <ul>
+            @for (line of promise; track line; let i = $index) {
+              <li [style.--i]="i">{{ t('promise.' + line) }}</li>
+            }
+          </ul>
+        </blockquote>
+        <p class="nota">{{ t('promise.pack') }}</p>
+      </div>
+    </section>
+
+    <section class="sezione sezione--lavanda" aria-labelledby="motti-titolo">
+      <div class="wrap">
+        <h2 id="motti-titolo">{{ t('mottos.title') }}</h2>
+        <p>{{ t('mottos.intro') }}</p>
+        <ul class="motti" appRevealOnScroll>
+          @for (motto of mottos; track motto; let i = $index) {
+            <li [style.--i]="i">
+              <span class="motto">{{ t('mottos.' + motto + '.motto') }}</span>
+              <span class="chi">{{ t('mottos.' + motto + '.who') }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="sezione" aria-label="Baden-Powell">
+      <div class="wrap">
+        <figure class="citazione citazione--bp" appRevealOnScroll>
+          <blockquote>
+            <p>{{ t('bp.quote') }}</p>
+          </blockquote>
+          <figcaption>{{ t('bp.source') }}</figcaption>
+        </figure>
+        <p class="fonti">
+          {{ t('sources.label') }} {{ t('sources.rules') }}
+          <a [href]="rulesUrl">{{ t('sources.rulesLink') }}</a>
+          {{ t('sources.pact') }}
+        </p>
+      </div>
+    </section>
+  </main>
+</ng-container>

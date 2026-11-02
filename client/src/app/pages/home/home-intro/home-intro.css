@@ -16,3 +16,8 @@
   font-size: 1rem;
   line-height: 1.45;
 }
+@media (min-width: 62rem) {
+  .griglia--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

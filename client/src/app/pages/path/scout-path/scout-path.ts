@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslocoDirective } from '@jsverse/transloco';
-import { RevealOnScroll } from './reveal-on-scroll';
+import { RevealOnScroll } from '../../../shared/reveal-on-scroll';
 
 @Component({
   selector: 'app-scout-path',

@@ -1,0 +1,121 @@
+.percorso {
+  position: relative;
+  margin-top: 2.5rem;
+}
+.cammino {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2.25rem;
+}
+.cammino li {
+  position: relative;
+  padding-left: 3rem;
+}
+.cammino li::before {
+  content: '';
+  position: absolute;
+  left: 0.62rem;
+  top: 1.6rem;
+  bottom: -2.25rem;
+  border-left: 3px dotted var(--viola);
+}
+.cammino li:last-child::before {
+  display: none;
+}
+.tappa {
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--oro);
+  border: 3px solid var(--viola);
+}
+.tappa--fine {
+  background: var(--carta);
+}
+.tappa--fine::after {
+  content: '';
+  position: absolute;
+  inset: 0.3rem;
+  border-radius: 50%;
+  background: var(--viola);
+}
+.cammino .eta {
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--viola);
+  margin: 0 0 0.35rem;
+}
+.cammino .eta span {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--testo-tenue);
+  margin-left: 0.35rem;
+}
+.cammino h3 {
+  margin-bottom: 0.5rem;
+  color: var(--inchiostro);
+}
+.cammino p {
+  font-size: 1.05rem;
+}
+.tracciato {
+  display: none;
+}
+@media (min-width: 52rem) {
+  .cammino {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+    padding-top: 4.25rem;
+  }
+  .cammino li {
+    padding-left: 0;
+    text-align: center;
+  }
+  .cammino li::before {
+    display: none;
+  }
+  .tappa {
+    top: -3.55rem;
+    left: calc(50% - 0.75rem);
+  }
+  .cammino p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tracciato {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4.6rem;
+    overflow: visible;
+    clip-path: inset(0);
+  }
+  .tracciato path {
+    fill: none;
+    stroke: var(--viola);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 0.1 9;
+  }
+  .reveal-ready .tracciato {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1.8s cubic-bezier(0.45, 0.05, 0.3, 1);
+  }
+  .reveal-ready.visto .tracciato {
+    clip-path: inset(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready .tracciato {
+    transition: none;
+    clip-path: inset(0);
+  }
+}

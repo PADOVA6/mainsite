@@ -1,0 +1,24 @@
+.piede {
+  background: var(--viola);
+  color: #fff;
+  padding: 2.75rem 0 3rem;
+  font-size: 1rem;
+}
+.piede p {
+  max-width: 46rem;
+  margin-bottom: 0.45rem;
+}
+.piede .ente {
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+.piede a {
+  color: #fff;
+}
+.piede a:hover {
+  color: var(--oro);
+}
+.piede .associazione {
+  margin-top: 1.4rem;
+}

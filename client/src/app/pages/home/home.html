@@ -1,0 +1,10 @@
+<ng-container *transloco="let t; prefix: 'home'">
+  <a class="skip" href="#contenuto">{{ t('skip') }}</a>
+</ng-container>
+<app-site-hero />
+<div class="corda" aria-hidden="true"></div>
+<main id="contenuto" tabindex="-1">
+  <app-contact-section />
+  <app-about-section />
+  <app-scout-path />
+</main>

@@ -1,0 +1,39 @@
+.due-colonne {
+  display: grid;
+  gap: 1.5rem;
+}
+p-card {
+  min-width: 0;
+  scroll-margin-top: 1.5rem;
+}
+.indirizzo {
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  margin-bottom: 1.2rem;
+}
+.indirizzo strong {
+  color: var(--viola);
+  font-weight: 700;
+}
+.email {
+  font-size: clamp(1.3rem, 3.2vw, 1.75rem);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.nota {
+  color: var(--testo-tenue);
+  font-size: 1rem;
+}
+.nota a {
+  overflow-wrap: anywhere;
+}
+.parrocchia {
+  margin-bottom: 0;
+}
+@media (min-width: 46rem) {
+  .due-colonne {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}

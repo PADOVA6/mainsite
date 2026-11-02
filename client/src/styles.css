@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+@import 'primeicons/primeicons.css';
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/fonts/overpass-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/fonts/overpass-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/fonts/overpass-latin-900-normal.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+  --viola: #3f2177;
+  --viola-scuro: #2b1656;
+  --oro: #f6bf00;
+  --blu: #0a43bf;
+  --inchiostro: #1e1636;
+  --lavanda: #f3f0fa;
+  --carta: #fff;
+  --testo-tenue: #5a5370;
+  --misura: 40rem;
+  --pagina: 68rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--carta);
+  color: var(--inchiostro);
+  font-family:
+    'Overpass',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: var(--blu);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 0.08em;
+}
+a:hover {
+  color: var(--viola);
+}
+a:not(.p-button) {
+  text-decoration-line: underline;
+}
+:focus-visible {
+  outline: 3px solid var(--oro);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--viola);
+  letter-spacing: -0.01em;
+}
+h2 {
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.35rem;
+}
+p {
+  margin: 0 0 1rem;
+  max-width: var(--misura);
+}
+.wrap {
+  max-width: var(--pagina);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.sezione {
+  padding: clamp(3rem, 8vw, 5.5rem) 0;
+}
+.sezione--lavanda {
+  background: var(--lavanda);
+}
+.corda {
+  height: 9px;
+  background: repeating-linear-gradient(115deg, var(--viola) 0 7px, transparent 7px 13px);
+  opacity: 0.9;
+}
+.corda--oro {
+  background: repeating-linear-gradient(115deg, var(--oro) 0 7px, transparent 7px 13px);
+  opacity: 1;
+}
+.azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.azioni .p-button {
+  color: #fff;
+  font-family: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.4rem 0.65rem;
+}
+.azioni .p-button-outlined {
+  color: var(--viola);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

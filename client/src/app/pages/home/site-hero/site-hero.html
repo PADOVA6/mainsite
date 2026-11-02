@@ -1,0 +1,33 @@
+<header class="testata" *transloco="let t; prefix: 'home.hero'">
+  <div class="wrap">
+    <img
+      class="logo"
+      src="logo-padova6.png"
+      width="499"
+      height="600"
+      [alt]="t('logoAlt')"
+      fetchpriority="high"
+    />
+    <div>
+      <h1>
+        <span class="nome-esteso">{{ t('group') }}</span
+        >Padova 6
+      </h1>
+      <p class="sottotitolo">{{ t('subtitle') }}</p>
+      <div class="azioni">
+        <a pButton href="mailto:padova6@veneto.agesci.it">
+          <span class="pi pi-envelope" aria-hidden="true"></span>
+          <span pButtonLabel>{{ t('write') }}</span>
+        </a>
+        <a pButton [outlined]="true" href="#dove">
+          <span class="pi pi-map-marker" aria-hidden="true"></span>
+          <span pButtonLabel>{{ t('location') }}</span>
+        </a>
+      </div>
+      <address class="riferimenti">
+        <a href="mailto:padova6@veneto.agesci.it">padova6&#64;veneto.agesci.it</a>
+        <a href="#dove">{{ t('address') }}</a>
+      </address>
+    </div>
+  </div>
+</header>

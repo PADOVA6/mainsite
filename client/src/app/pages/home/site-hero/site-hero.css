@@ -1,0 +1,50 @@
+.testata {
+  padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(2.5rem, 6vw, 4.5rem);
+}
+.wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+.logo {
+  width: clamp(9rem, 32vw, 15rem);
+}
+h1 {
+  font-size: clamp(4rem, 15vw, 8.5rem);
+  line-height: 0.9;
+}
+.nome-esteso {
+  display: block;
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--inchiostro);
+  margin-bottom: 0.6rem;
+}
+.sottotitolo {
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  line-height: 1.45;
+  margin: 1.4rem 0 1.8rem;
+  max-width: 30rem;
+}
+.riferimenti {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  font-style: normal;
+}
+.riferimenti a {
+  width: fit-content;
+  overflow-wrap: anywhere;
+}
+.riferimenti a:first-child {
+  font-weight: 700;
+}
+@media (min-width: 46rem) {
+  .wrap {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+}

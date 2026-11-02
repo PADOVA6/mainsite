@@ -1,0 +1,37 @@
+<section
+  class="sezione sezione--lavanda"
+  id="cammino"
+  aria-labelledby="cammino-titolo"
+  *transloco="let t; prefix: 'home.path'"
+>
+  <div class="wrap">
+    <h2 id="cammino-titolo">{{ t('title') }}</h2>
+    <p>{{ t('intro') }}</p>
+    <div class="percorso" appRevealOnScroll>
+      <svg
+        class="tracciato"
+        viewBox="0 0 1000 74"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          vector-effect="non-scaling-stroke"
+          d="M 0 30 C 65 30, 115 22, 155 22 C 255 22, 320 66, 420 48 C 470 39, 480 22, 500 22 C 600 22, 655 66, 755 50 C 805 42, 815 22, 845 22 C 900 22, 950 30, 1000 30"
+        />
+      </svg>
+      <ol class="cammino">
+        @for (stage of stages; track stage.key; let last = $last) {
+          <li>
+            <span class="tappa" [class.tappa--fine]="last" aria-hidden="true"></span>
+            <p class="eta">
+              {{ stage.ages }}<span>{{ t('years') }}</span>
+            </p>
+            <h3>{{ t(stage.key + '.title') }}</h3>
+            <p>{{ t(stage.key + '.description') }}</p>
+          </li>
+        }
+      </ol>
+    </div>
+  </div>
+</section>

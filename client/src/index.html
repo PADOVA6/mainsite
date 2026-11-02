@@ -9,6 +9,28 @@
       name="description"
       content="AGESCI Gruppo Padova 6 APS: gruppo scout per ragazze e ragazzi dagli 8 ai 21 anni presso la parrocchia di Cristo Re, a Padova."
     />
+    <!-- I font della prima schermata partono subito, insieme all'HTML, invece di aspettare il CSS -->
+    <link
+      rel="preload"
+      href="/fonts/overpass-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/overpass-latin-700-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/overpass-latin-900-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <meta property="og:title" content="Gruppo scout AGESCI Padova 6" />
@@ -18,6 +40,20 @@
     />
     <meta property="og:image" content="logo-padova6.png" />
     <meta name="theme-color" content="#3F2177" />
+    <script>
+      // La pagina pre-renderizzata è in tema chiaro e ThemeService parte solo dopo il caricamento
+      // di Angular: applichiamo subito il tema scuro, prima del primo disegno, per evitare il
+      // lampo chiaro. Stessa logica e stessa chiave (user-theme) di ThemeService.
+      (function () {
+        try {
+          var saved = localStorage.getItem('user-theme');
+          var dark =
+            saved === 'dark' ||
+            (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('my-app-dark');
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <app-root></app-root>

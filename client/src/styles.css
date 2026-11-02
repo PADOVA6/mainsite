@@ -25,6 +25,45 @@
   font-display: swap;
 }
 
+/*
+ * Font di riserva con le misure di Overpass: finché Overpass non è caricato il testo usa Arial
+ * (o Liberation Sans, metricamente identico) ridimensionato in modo da occupare lo stesso spazio,
+ * così al cambio di font il testo non si sposta. Valori calcolati dai file di Overpass.
+ */
+@font-face {
+  font-family: 'Overpass Fallback';
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans'), local('LiberationSans');
+  font-weight: 400;
+  size-adjust: 98.14%;
+  ascent-override: 89.97%;
+  descent-override: 39.03%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Overpass Fallback';
+  src:
+    local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'),
+    local('LiberationSans-Bold');
+  font-weight: 700;
+  size-adjust: 97.17%;
+  ascent-override: 90.87%;
+  descent-override: 39.41%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Overpass Fallback';
+  src:
+    local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'),
+    local('LiberationSans-Bold');
+  font-weight: 900;
+  size-adjust: 100.12%;
+  ascent-override: 88.2%;
+  descent-override: 38.26%;
+  line-gap-override: 0%;
+}
+
 :root {
   --viola: #3f2177;
   --viola-scuro: #2b1656;
@@ -69,6 +108,7 @@ body {
   color: var(--inchiostro);
   font-family:
     'Overpass',
+    'Overpass Fallback',
     system-ui,
     -apple-system,
     'Segoe UI',

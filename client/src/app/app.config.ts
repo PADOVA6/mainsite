@@ -7,8 +7,9 @@ import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
 import { definePreset } from '@primeuix/themes';
 import { provideHttpClient } from '@angular/common/http';
-import { TranslocoHttpLoader } from './transloco-loader';
+import { TranslocoJsonLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -22,7 +23,7 @@ export const appConfig: ApplicationConfig = {
         reRenderOnLangChange: true,
         prodMode: !isDevMode(),
       },
-      loader: TranslocoHttpLoader,
+      loader: TranslocoJsonLoader,
     }),
     providePrimeNG({
       theme: {
@@ -70,5 +71,6 @@ export const appConfig: ApplicationConfig = {
         },
       },
     }),
+    provideClientHydration(withEventReplay()),
   ],
 };

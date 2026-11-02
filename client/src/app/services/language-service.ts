@@ -1,4 +1,5 @@
-import { inject, Injectable } from '@angular/core';
+import { DOCUMENT, inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { getBrowserLang, TranslocoService } from '@jsverse/transloco';
 import { PrimeNG } from 'primeng/config';
 import { take } from 'rxjs';
@@ -10,6 +11,9 @@ import { readPreference, writePreference } from './preference-storage';
 export class LanguageService {
   private translocoService = inject(TranslocoService);
   private primeng = inject(PrimeNG);
+  private document = inject(DOCUMENT);
+  // Durante la pre-renderizzazione non esistono localStorage né la lingua del browser
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
   private readonly availableLangs = ['it', 'en'];
   private readonly fallbackLang = 'it';
@@ -24,6 +28,11 @@ export class LanguageService {
   }
 
   private determineLanguage(): string {
+    // In pre-renderizzazione la pagina viene generata nella lingua predefinita
+    if (!this.isBrowser) {
+      return this.fallbackLang;
+    }
+
     // 1. Priorità al localStorage
     const savedLang = readPreference('user-lang');
     if (savedLang && this.availableLangs.includes(savedLang)) {
@@ -46,11 +55,13 @@ export class LanguageService {
     }
 
     // Persistenza e stato Transloco
-    writePreference('user-lang', lang);
+    if (this.isBrowser) {
+      writePreference('user-lang', lang);
+    }
     this.translocoService.setActiveLang(lang);
 
     // Aggiornamento DOM e PrimeNG
-    document.documentElement.lang = lang;
+    this.document.documentElement.lang = lang;
     this.syncPrimeNG(lang);
   }
 

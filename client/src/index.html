@@ -18,6 +18,20 @@
     />
     <meta property="og:image" content="logo-padova6.png" />
     <meta name="theme-color" content="#3F2177" />
+    <script>
+      // La pagina pre-renderizzata è in tema chiaro e ThemeService parte solo dopo il caricamento
+      // di Angular: applichiamo subito il tema scuro, prima del primo disegno, per evitare il
+      // lampo chiaro. Stessa logica e stessa chiave (user-theme) di ThemeService.
+      (function () {
+        try {
+          var saved = localStorage.getItem('user-theme');
+          var dark =
+            saved === 'dark' ||
+            (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('my-app-dark');
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <app-root></app-root>

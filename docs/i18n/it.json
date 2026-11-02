@@ -1,13 +1,28 @@
 {
+  "nav": {
+    "label": "Navigazione principale",
+    "home": "Padova 6 - Home",
+    "about": "Chi siamo",
+    "path": "Il cammino",
+    "contacts": "Contatti",
+    "menu": "Menu",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "useEnglish": "Passa all'inglese",
+    "useItalian": "Passa all'italiano",
+    "useLight": "Passa al tema chiaro",
+    "useDark": "Passa al tema scuro"
+  },
   "home": {
     "skip": "Vai al contenuto",
     "hero": {
-      "logoAlt": "Logo del gruppo scout AGESCI Padova 6: giglio scout con la scritta AGESCI e Padova 6",
       "group": "Gruppo scout AGESCI",
       "subtitle": "Ragazze e ragazzi dagli 8 ai 21 anni, alla parrocchia di Cristo Re a Padova.",
       "write": "Scrivici",
       "location": "Dove ci troviamo",
-      "address": "Parrocchia di Cristo Re · Via Sant’Osvaldo 4, Padova"
+      "address": "Parrocchia di Cristo Re · Via Sant’Osvaldo 4, Padova",
+      "photoAlt": "La facciata della chiesa di Cristo Re e Sant’Osvaldo a Padova, con il campanile tra gli alberi.",
+      "photoCaption": "La parrocchia dove ci ritroviamo."
     },
     "contacts": {
       "location": "Dove ci troviamo",

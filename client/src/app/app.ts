@@ -10,10 +10,20 @@ import { SiteNavbar } from './layout/site-navbar/site-navbar';
   template: `
     <a class="skip" href="#contenuto" *transloco="let t">{{ t('home.skip') }}</a>
     <app-site-navbar />
-    <router-outlet />
+    <div class="pagina"><router-outlet /></div>
     <app-site-footer />
   `,
   styles: `
+    /* il footer resta in fondo anche nelle pagine con poco contenuto */
+    :host {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+    .pagina {
+      flex: 1 0 auto;
+    }
     .skip {
       position: absolute;
       left: -999px;

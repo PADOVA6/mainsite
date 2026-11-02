@@ -17,22 +17,20 @@ Non sono ancora configurati runner per test unitari o end-to-end.
 
 ## Struttura
 
-- [Home](src/app/pages/home/home.ts) compone le sezioni, senza logica di presentazione duplicata.
-- [SiteHero](src/app/pages/home/site-hero/site-hero.ts) mostra identità, email e indirizzo
-  già in apertura, senza duplicare il logo della navbar.
-  Una foto della chiesa affianca il testo su desktop e lo segue su mobile.
-  Le azioni usano link nativi con direttive Button di PrimeNG.
-- [ContactSection](src/app/pages/home/contact-section/contact-section.ts) raccoglie sede,
-  mappa, sito della parrocchia, email, Instagram e PEC in Card PrimeNG, in fondo alla pagina
-  prima del footer.
-- [AboutSection](src/app/pages/home/about-section/about-section.ts) descrive il gruppo.
-- [ScoutPath](src/app/pages/home/scout-path/scout-path.ts) presenta le tre fasce di età
-  come lista ordinata; il tracciato SVG originale resta decorativo.
-- [RevealOnScroll](src/app/pages/home/scout-path/reveal-on-scroll.ts) gestisce
+- [Home](src/app/pages/home/home.ts): testata ([SiteHero](src/app/pages/home/site-hero/site-hero.ts))
+  e [HomeIntro](src/app/pages/home/home-intro/home-intro.ts), con presentazione, numeri del gruppo
+  e schede che portano alle pagine interne.
+- [AboutPage](src/app/pages/about/about-page.ts): storia, metodo scout, capi.
+- [PathPage](src/app/pages/path/path-page.ts): tappe del cammino
+  ([ScoutPath](src/app/pages/path/scout-path/scout-path.ts), con il tracciato SVG decorativo),
+  unità, orari e invito a contattarci.
+- [ContactPage](src/app/pages/contact/contact-page.ts): dove ci troviamo, scrivici, seguici.
+  I profili social sono un elenco nel componente.
+- [RevealOnScroll](src/app/pages/path/scout-path/reveal-on-scroll.ts) gestisce
   l'animazione del percorso con cleanup dell'observer e rispetto del movimento ridotto.
 - [SiteFooter](src/app/layout/site-footer/site-footer.ts) appartiene al layout comune:
   mantiene testi italiani, collegamenti e stili del footer HTML originale, anche nelle altre lingue.
-- [SiteNavbar](src/app/layout/site-navbar/site-navbar.ts) offre link alle sezioni della home,
+- [SiteNavbar](src/app/layout/site-navbar/site-navbar.ts) offre link alle pagine Chi siamo, Il cammino e Contatti,
   il solo logo, un pulsante lingua che mostra la destinazione EN/IT
   e un pulsante con la sola icona sole/luna per il tema chiaro/scuro.
   Entrambi hanno etichette accessibili e tooltip che descrivono l'azione.

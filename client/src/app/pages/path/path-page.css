@@ -1,0 +1,37 @@
+.unita {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.unita .scheda {
+  scroll-margin-top: 1.5rem;
+}
+.chi {
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--testo-tenue);
+}
+.unita h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+.dettaglio {
+  font-size: 1rem;
+}
+.quando {
+  margin: 2rem 0 0;
+}
+.quando dt {
+  font-weight: 700;
+  color: var(--viola);
+  font-size: 1.2rem;
+}
+.quando dd {
+  margin: 0.3rem 0 0;
+}
+@media (min-width: 52rem) {
+  .unita {
+    grid-template-columns: 1fr 1fr;
+  }
+}

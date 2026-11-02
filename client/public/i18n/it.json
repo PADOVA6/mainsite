@@ -25,23 +25,97 @@
       "photoCaption": "La parrocchia dove ci ritroviamo.",
       "photoCredit": "Foto"
     },
-    "contacts": {
-      "location": "Dove ci troviamo",
-      "parish": "Parrocchia di Cristo Re",
-      "map": "Apri la mappa",
-      "parishPage": "La pagina del gruppo sul sito della parrocchia",
-      "title": "Contatti",
-      "intro": "Per informazioni e iscrizioni scrivici a",
-      "instagram": "Seguici anche su Instagram:",
-      "official": "Per comunicazioni ufficiali: PEC"
+    "intro": {
+      "title": "Scout a Cristo Re",
+      "text": "Siamo il Padova 6, un gruppo dell’AGESCI con una storia che parte dalla fine degli anni Sessanta. Ci ritroviamo la domenica alla parrocchia di Cristo Re e, circa una volta al mese, ogni unità parte per un’uscita.",
+      "facts": {
+        "ages": {
+          "value": "8–21",
+          "label": "anni, dai lupetti ai rover e alle scolte"
+        },
+        "units": {
+          "value": "5",
+          "label": "unità: Branco, due Reparti, Noviziato e Clan"
+        },
+        "sunday": {
+          "value": "Domenica",
+          "label": "il giorno delle attività di Branco e Reparti"
+        },
+        "monthly": {
+          "value": "Ogni mese",
+          "label": "una caccia, un bivacco o un’uscita"
+        }
+      },
+      "more": "Scopri il Padova 6",
+      "cards": {
+        "about": {
+          "title": "Chi siamo",
+          "text": "La nostra storia, il metodo scout e i capi che accompagnano ragazze e ragazzi.",
+          "cta": "Leggi la nostra storia"
+        },
+        "path": {
+          "title": "Il cammino",
+          "text": "Branco, Reparti, Noviziato e Clan: come si vive lo scoutismo dagli 8 ai 21 anni.",
+          "cta": "Scopri le unità"
+        },
+        "contacts": {
+          "title": "Contatti",
+          "text": "Dove trovarci, come scriverci e dove seguirci.",
+          "cta": "Scrivici"
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "Chi siamo",
+    "lead": "Il Padova 6 è un gruppo scout dell’AGESCI, l’Associazione Guide e Scouts Cattolici Italiani. Accompagniamo ragazze e ragazzi dagli 8 ai 21 anni, alla parrocchia di Cristo Re a Padova.",
+    "history": {
+      "title": "La nostra storia",
+      "y1968": "È l’anno di fondazione presunto. Il gruppo nasce come Padova 2, da una costola della sezione di San Francesco, in centro a Padova.",
+      "y1981": "Ormai diventato Padova 6, il gruppo è abbastanza grande da allargarsi alla vicina parrocchia di Santa Rita, con un secondo branco e due nuovi reparti, uno maschile e uno femminile. La branca Rover e Scolte resta unica.",
+      "y2002": "Il calo di capi e ragazzi porta a chiudere le unità di Santa Rita. Il gruppo prende la forma di oggi: il Branco della Candida Luna, i reparti Enterprise e Orione, il Noviziato e il Clan della Pioggia Battente.",
+      "y2022": "Il 28 dicembre il gruppo viene iscritto al Registro Unico Nazionale del Terzo Settore come associazione di promozione sociale.",
+      "source": "Le date fino al 2002 vengono dalla pagina del gruppo su"
     },
-    "about": {
-      "title": "Chi siamo",
-      "description": "Siamo un gruppo dell’AGESCI, l’Associazione Guide e Scouts Cattolici Italiani. Accompagniamo ragazze e ragazzi dagli 8 ai 21 anni con il metodo scout: attività all’aperto, vita di comunità e servizio agli altri.",
-      "leaders": "I capi che seguono le unità sono educatori volontari, formati dall’associazione. Ci ritroviamo presso la parrocchia di Cristo Re, a Padova."
+    "method": {
+      "title": "Il metodo scout",
+      "intro": "Lo scoutismo nasce da un’idea di Baden-Powell: si cresce facendo, insieme agli altri e all’aria aperta. Nell’AGESCI questa idea diventa un metodo.",
+      "doing": {
+        "title": "Imparare facendo",
+        "text": "Costruire, orientarsi, cucinare al campo, organizzare un’impresa: le cose si imparano mettendoci le mani."
+      },
+      "outdoors": {
+        "title": "Vita all’aperto",
+        "text": "Boschi, prati e sentieri sono il posto dove si gioca, si cammina e si sta insieme."
+      },
+      "groups": {
+        "title": "Piccoli gruppi",
+        "text": "Sestiglie in Branco, squadriglie in Reparto: ognuno ha un posto e una responsabilità verso gli altri."
+      },
+      "growth": {
+        "title": "Crescita personale",
+        "text": "Ognuno segue il suo cammino, con traguardi scelti insieme ai capi e adatti alla sua età."
+      },
+      "service": {
+        "title": "Servizio",
+        "text": "Fare del proprio meglio per gli altri, dalla buona azione dei lupetti al volontariato del Clan."
+      },
+      "faith": {
+        "title": "Fede",
+        "text": "L’AGESCI è un’associazione cattolica: la fede fa parte del cammino ed è vissuta nella comunità e nella parrocchia."
+      }
     },
-    "path": {
-      "title": "Dagli 8 ai 21 anni",
+    "leaders": {
+      "title": "I capi",
+      "text": "I capi sono educatori volontari, formati con i percorsi dell’AGESCI. Ogni unità ha i suoi capi, che preparano le attività e seguono la crescita di ciascun ragazzo.",
+      "community": "Insieme formano la Comunità Capi, che guida il gruppo e ne scrive il progetto educativo."
+    }
+  },
+  "path": {
+    "title": "Il cammino scout",
+    "lead": "Dai lupetti ai rover e alle scolte: come si vive lo scoutismo nelle cinque unità del Padova 6.",
+    "timeline": {
+      "title": "Tre tappe, dagli 8 ai 21 anni",
       "intro": "Il cammino scout ha tre tappe. Ognuna ha la sua unità, i suoi capi e il suo modo di vivere l’avventura.",
       "years": "anni",
       "pack": {
@@ -56,6 +130,76 @@
         "title": "Noviziato e Clan",
         "description": "Rover e scolte scelgono la strada, la comunità e il servizio."
       }
+    },
+    "units": {
+      "title": "Le nostre unità",
+      "whenLabel": "Quando",
+      "pack": {
+        "name": "Branco della Candida Luna",
+        "who": "Lupetti · 8–11 anni",
+        "text": "Il Branco vive l’avventura nell’ambiente del Libro della Giungla di Rudyard Kipling: si cresce giocando e si impara a fare del proprio meglio insieme agli altri.",
+        "groupsLabel": "Le sestiglie",
+        "groups": "Neri, Bruni, Pezzati, Fulvi, Bianchi e Grigi.",
+        "when": "La domenica e, circa una volta al mese, una caccia: un’uscita di un giorno."
+      },
+      "troops": {
+        "name": "Reparti Enterprise e Orione",
+        "who": "Esploratori e guide · 12–16 anni",
+        "text": "Il gruppo ha due reparti paralleli: Enterprise, maschile, e Orione, femminile. In Reparto si vive in squadriglia, un piccolo gruppo guidato da uno dei ragazzi più grandi, e si imparano le tecniche scout per vivere imprese e campi.",
+        "groupsLabel": "Le squadriglie",
+        "groups": "Enterprise: Ghepardi, Aquile e Lupi. Orione: Rondini, Delfini e Leoni.",
+        "when": "La domenica e, circa una volta al mese, un bivacco, di solito dal sabato pomeriggio alla domenica pomeriggio."
+      },
+      "novitiate": {
+        "name": "Noviziato",
+        "who": "16–17 anni · in terza superiore",
+        "text": "Un anno di passaggio tra il Reparto e il Clan. È il momento per scoprire le tre parole del Clan: strada, comunità e servizio."
+      },
+      "clan": {
+        "name": "Clan della Pioggia Battente",
+        "who": "Rover e scolte · 17–21 anni",
+        "text": "Il Clan vive lo scoutismo attraverso la strada, la comunità e il servizio. Il cammino si conclude con la Partenza: la scelta di portare nella vita da adulti i valori scout.",
+        "when": "Una riunione ogni settimana, non la domenica. E poi uscite, bivacchi e volontariato."
+      }
+    },
+    "schedule": {
+      "title": "Quando ci troviamo",
+      "sunday": {
+        "when": "La domenica",
+        "what": "Attività di Branco e Reparti"
+      },
+      "weekly": {
+        "when": "Ogni settimana",
+        "what": "Riunione del Clan"
+      },
+      "monthly": {
+        "when": "Circa una volta al mese",
+        "what": "Caccia del Branco, bivacco dei Reparti, uscite del Clan"
+      }
+    },
+    "join": {
+      "title": "Vuoi unirti a noi?",
+      "text": "Scrivici: ti spieghiamo come funzionano le iscrizioni.",
+      "cta": "Contattaci"
+    }
+  },
+  "contacts": {
+    "title": "Contatti",
+    "lead": "Per informazioni e iscrizioni il modo più semplice è scriverci un’email.",
+    "location": {
+      "title": "Dove ci troviamo",
+      "parish": "Parrocchia di Cristo Re",
+      "map": "Apri la mappa"
+    },
+    "write": {
+      "title": "Scrivici",
+      "intro": "Per informazioni e iscrizioni",
+      "official": "Per comunicazioni ufficiali: PEC",
+      "parishPage": "La pagina del gruppo sul sito della parrocchia"
+    },
+    "follow": {
+      "title": "Seguici",
+      "on": "Il Padova 6 su {{name}}"
     }
   },
   "errors": {

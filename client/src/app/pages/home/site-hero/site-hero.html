@@ -11,14 +11,14 @@
           <span class="pi pi-envelope" aria-hidden="true"></span>
           <span pButtonLabel>{{ t('write') }}</span>
         </a>
-        <a pButton class="p-button-outlined" href="#dove">
+        <a pButton class="p-button-outlined" routerLink="/contatti" fragment="dove">
           <span class="pi pi-map-marker" aria-hidden="true"></span>
           <span pButtonLabel>{{ t('location') }}</span>
         </a>
       </div>
       <address class="riferimenti">
         <a href="mailto:padova6@veneto.agesci.it">padova6&#64;veneto.agesci.it</a>
-        <a href="#dove">{{ t('address') }}</a>
+        <a routerLink="/contatti" fragment="dove">{{ t('address') }}</a>
       </address>
     </div>
     <figure class="foto-parrocchia">

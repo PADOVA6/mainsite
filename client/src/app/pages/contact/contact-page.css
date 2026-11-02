@@ -1,0 +1,82 @@
+.blocchi {
+  display: grid;
+  gap: 1.25rem;
+}
+.blocchi .scheda {
+  scroll-margin-top: 1.5rem;
+}
+.blocchi h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.indirizzo {
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  margin-bottom: 1.2rem;
+}
+.indirizzo strong {
+  color: var(--viola);
+}
+.azioni {
+  margin-bottom: 0;
+}
+.etichetta {
+  margin-bottom: 0.25rem;
+}
+.email {
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.nota {
+  color: var(--testo-tenue);
+  font-size: 1rem;
+}
+.nota a {
+  overflow-wrap: anywhere;
+}
+.parrocchia {
+  margin-bottom: 0;
+}
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.social-link {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--viola);
+  color: var(--su-primario);
+  text-decoration: none;
+}
+.social-link:hover {
+  color: var(--su-primario);
+  background: var(--blu-gruppo);
+}
+.social-link .pi {
+  font-size: 1.6rem;
+}
+@media (min-width: 46rem) {
+  .blocchi {
+    grid-template-columns: 1fr 1fr;
+  }
+  #seguici {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 62rem) {
+  .blocchi {
+    grid-template-columns: 1fr 1.3fr 0.7fr;
+  }
+  #seguici {
+    grid-column: auto;
+  }
+}

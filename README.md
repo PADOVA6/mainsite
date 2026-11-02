@@ -84,8 +84,18 @@ basta una riga con nome, indirizzo e icona di PrimeIcons.
 I testi di Legge, Promessa e motti nella pagina Missione sono quelli del
 [Regolamento metodologico AGESCI](https://www.agesci.it/download/statuto_patto_associativo_e_regolamenti/Regolamento-metodologico-2026.pdf)
 (aggiornato al Consiglio generale 2026); scopo e scelte vengono dal Patto associativo. Le
-traduzioni inglesi sono nostre. Le animazioni usano la direttiva `RevealOnScroll`
-(`src/app/shared`): senza JavaScript o con il movimento ridotto il contenuto è visibile subito.
+traduzioni inglesi sono nostre. Animazioni allo scorrimento:
+
+- **Direttiva** `RevealOnScroll` (`src/app/shared`): aggiunge `visto` quando l'elemento entra
+  nello schermo.
+- **Classi pronte** in `styles.css`: `anima` fa comparire l'elemento, `anima-figli` fa comparire i
+  figli uno dopo l'altro (`anima-figli--lato` li fa entrare da sinistra). Per usarle basta
+  aggiungere `appRevealOnScroll` e una delle classi.
+- **Stato nascosto:** vale solo con la classe `anim` su `<html>`, che lo script in `index.html`
+  aggiunge prima del primo disegno. Così anche ciò che è già sullo schermo si anima senza sparire e
+  ricomparire.
+- **Contenuto sempre visibile:** senza JavaScript, con il movimento ridotto o se Angular non parte
+  entro 4 secondi (`anim-pronta`, in `app.ts`), tutto resta visibile.
 
 Le date della storia del gruppo vengono dalla
 [pagina del gruppo su ScoutWiki](https://it.scoutwiki.org/Padova_6_AGESCI), che la pagina cita.

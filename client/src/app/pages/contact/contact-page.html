@@ -9,7 +9,7 @@
   <main id="contenuto" tabindex="-1">
     <section class="sezione sezione--lavanda">
       <div class="wrap blocchi">
-        <article class="scheda" id="dove" aria-labelledby="dove-titolo">
+        <article class="scheda anima" appRevealOnScroll id="dove" aria-labelledby="dove-titolo">
           <h2 id="dove-titolo">{{ t('location.title') }}</h2>
           <address class="indirizzo">
             <strong>{{ t('location.parish') }}</strong
@@ -27,7 +27,12 @@
             </a>
           </p>
         </article>
-        <article class="scheda" id="scrivici" aria-labelledby="scrivici-titolo">
+        <article
+          class="scheda anima"
+          appRevealOnScroll
+          id="scrivici"
+          aria-labelledby="scrivici-titolo"
+        >
           <h2 id="scrivici-titolo">{{ t('write.title') }}</h2>
           <p class="etichetta">{{ t('write.intro') }}</p>
           <p>
@@ -41,7 +46,12 @@
             <a href="https://cristorepd.it/scout-padova-6/">{{ t('write.parishPage') }}</a>
           </p>
         </article>
-        <article class="scheda" id="seguici" aria-labelledby="seguici-titolo">
+        <article
+          class="scheda anima"
+          appRevealOnScroll
+          id="seguici"
+          aria-labelledby="seguici-titolo"
+        >
           <h2 id="seguici-titolo">{{ t('follow.title') }}</h2>
           <ul class="social">
             @for (social of socials; track social.name) {

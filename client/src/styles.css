@@ -243,6 +243,49 @@ a.scheda--link:hover {
   color: var(--viola);
 }
 
+/*
+ * Animazioni allo scorrimento, attivate dalla direttiva RevealOnScroll (src/app/shared).
+ * .anima: l'elemento compare salendo. .anima-figli: compaiono i figli, uno dopo l'altro.
+ * Lo stato nascosto si applica senza transizione; la transizione parte con "visto".
+ * Lo stato nascosto vale solo con la classe "anim" su <html> (vedi index.html): senza JavaScript
+ * o con il movimento ridotto tutto resta visibile.
+ */
+:root.anim .reveal-ready.anima,
+:root.anim .reveal-ready.anima-figli > * {
+  opacity: 0;
+  transform: translateY(1.25rem);
+}
+
+:root.anim .reveal-ready.anima-figli--lato > * {
+  transform: translateX(-1.5rem);
+}
+:root.anim .reveal-ready.visto.anima,
+:root.anim .reveal-ready.visto.anima-figli > * {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+:root.anim .reveal-ready.visto.anima-figli > :nth-child(2) {
+  transition-delay: 0.14s;
+}
+:root.anim .reveal-ready.visto.anima-figli > :nth-child(3) {
+  transition-delay: 0.28s;
+}
+:root.anim .reveal-ready.visto.anima-figli > :nth-child(4) {
+  transition-delay: 0.42s;
+}
+:root.anim .reveal-ready.visto.anima-figli > :nth-child(5) {
+  transition-delay: 0.56s;
+}
+:root.anim .reveal-ready.visto.anima-figli > :nth-child(6) {
+  transition-delay: 0.7s;
+}
+:root.anim .reveal-ready.visto.anima-figli > :nth-child(n + 7) {
+  transition-delay: 0.84s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

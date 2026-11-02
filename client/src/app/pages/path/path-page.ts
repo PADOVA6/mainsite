@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslocoDirective } from '@jsverse/transloco';
+import { RevealOnScroll } from '../../shared/reveal-on-scroll';
 import { ButtonModule } from 'primeng/button';
 import { ScoutPath } from './scout-path/scout-path';
 
 @Component({
   selector: 'app-path-page',
-  imports: [TranslocoDirective, RouterLink, ButtonModule, ScoutPath],
+  imports: [TranslocoDirective, RouterLink, ButtonModule, ScoutPath, RevealOnScroll],
   templateUrl: './path-page.html',
   styleUrl: './path-page.css',
 })

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslocoDirective } from '@jsverse/transloco';
+import { RevealOnScroll } from '../../shared/reveal-on-scroll';
 
 @Component({
   selector: 'app-about-page',
-  imports: [TranslocoDirective],
+  imports: [TranslocoDirective, RevealOnScroll],
   templateUrl: './about-page.html',
   styleUrl: './about-page.css',
 })

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { afterNextRender, Component, DOCUMENT, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslocoDirective } from '@jsverse/transloco';
 import { SiteFooter } from './layout/site-footer/site-footer';
@@ -39,4 +39,10 @@ import { SiteNavbar } from './layout/site-navbar/site-navbar';
     }
   `,
 })
-export class App {}
+export class App {
+  constructor() {
+    // Angular è partito: le animazioni allo scorrimento possono restare attive (vedi index.html)
+    const document = inject(DOCUMENT);
+    afterNextRender(() => document.documentElement.classList.add('anim-pronta'));
+  }
+}

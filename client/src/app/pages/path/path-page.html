@@ -11,7 +11,7 @@
     <section class="sezione" aria-labelledby="unita-titolo">
       <div class="wrap">
         <h2 id="unita-titolo">{{ t('units.title') }}</h2>
-        <div class="unita">
+        <div class="unita anima-figli" appRevealOnScroll [revealThreshold]="0.15">
           @for (unit of units; track unit.key) {
             <article class="scheda" [id]="unit.key">
               <p class="chi">{{ t('units.' + unit.key + '.who') }}</p>
@@ -37,7 +37,7 @@
     <section class="sezione sezione--lavanda" aria-labelledby="quando-titolo">
       <div class="wrap">
         <h2 id="quando-titolo">{{ t('schedule.title') }}</h2>
-        <dl class="griglia quando">
+        <dl class="griglia quando anima-figli" appRevealOnScroll>
           @for (item of schedule; track item) {
             <div class="scheda">
               <dt>{{ t('schedule.' + item + '.when') }}</dt>
@@ -48,7 +48,7 @@
       </div>
     </section>
     <section class="sezione" aria-labelledby="iscrizioni-titolo">
-      <div class="wrap">
+      <div class="wrap anima-figli" appRevealOnScroll>
         <h2 id="iscrizioni-titolo">{{ t('join.title') }}</h2>
         <p>{{ t('join.text') }}</p>
         <p class="azioni">

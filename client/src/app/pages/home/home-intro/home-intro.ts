@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslocoDirective } from '@jsverse/transloco';
+import { RevealOnScroll } from '../../../shared/reveal-on-scroll';
 
 @Component({
   selector: 'app-home-intro',
-  imports: [TranslocoDirective, RouterLink],
+  imports: [TranslocoDirective, RouterLink, RevealOnScroll],
   templateUrl: './home-intro.html',
   styleUrl: './home-intro.css',
 })

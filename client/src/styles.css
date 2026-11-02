@@ -62,6 +62,9 @@
   --bordo: #d7d0e5;
   --su-primario: #fff;
   --viola-brand: #3f2177;
+  /* colori del gruppo, dall'anello del logo: uguali in tema chiaro e scuro */
+  --giallo-gruppo: #e8c95a;
+  --blu-gruppo: #3a5f9f;
   --misura: 40rem;
   --pagina: 68rem;
   color-scheme: light;
@@ -155,14 +158,14 @@ p {
 .sezione--lavanda {
   background: var(--lavanda);
 }
+/* Corda a due capi nei colori del gruppo: separa la testata dal contenuto e il contenuto dal footer */
 .corda {
   height: 9px;
-  background: repeating-linear-gradient(115deg, var(--viola) 0 7px, transparent 7px 13px);
-  opacity: 0.9;
-}
-.corda--oro {
-  background: repeating-linear-gradient(115deg, var(--oro) 0 7px, transparent 7px 13px);
-  opacity: 1;
+  background: repeating-linear-gradient(
+    115deg,
+    var(--giallo-gruppo) 0 6.5px,
+    var(--blu-gruppo) 6.5px 13px
+  );
 }
 .azioni {
   display: flex;

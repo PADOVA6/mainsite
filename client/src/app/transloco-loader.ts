@@ -14,6 +14,8 @@ const translations: Record<string, Translation> = { it, en };
 export class TranslocoJsonLoader implements TranslocoLoader {
   getTranslation(lang: string) {
     const translation = translations[lang];
-    return translation ? of(translation) : throwError(() => new Error(`Lingua non disponibile: ${lang}`));
+    return translation
+      ? of(translation)
+      : throwError(() => new Error(`Lingua non disponibile: ${lang}`));
   }
 }

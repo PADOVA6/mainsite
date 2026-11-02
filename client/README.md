@@ -23,7 +23,8 @@ Non sono ancora configurati runner per test unitari o end-to-end.
   Una foto della chiesa affianca il testo su desktop e lo segue su mobile.
   Le azioni usano link nativi con direttive Button di PrimeNG.
 - [ContactSection](src/app/pages/home/contact-section/contact-section.ts) raccoglie sede,
-  mappa, sito della parrocchia, email e PEC in Card PrimeNG subito dopo la testata.
+  mappa, sito della parrocchia, email, Instagram e PEC in Card PrimeNG, in fondo alla pagina
+  prima del footer.
 - [AboutSection](src/app/pages/home/about-section/about-section.ts) descrive il gruppo.
 - [ScoutPath](src/app/pages/home/scout-path/scout-path.ts) presenta le tre fasce di età
   come lista ordinata; il tracciato SVG originale resta decorativo.

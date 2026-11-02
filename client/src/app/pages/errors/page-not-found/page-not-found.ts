@@ -9,4 +9,4 @@ import { TranslocoDirective } from '@jsverse/transloco';
   templateUrl: './page-not-found.html',
   styles: ``,
 })
-export class PageNotFound { }
+export class PageNotFound {}

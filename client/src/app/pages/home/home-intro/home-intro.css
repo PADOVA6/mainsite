@@ -1,0 +1,18 @@
+.numeri {
+  display: grid;
+  gap: 1.5rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  margin: 2.5rem 0 0;
+}
+.numeri dt {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--viola);
+}
+.numeri dd {
+  margin: 0.3rem 0 0;
+  color: var(--testo-tenue);
+  font-size: 1rem;
+  line-height: 1.45;
+}

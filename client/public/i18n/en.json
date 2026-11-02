@@ -25,23 +25,97 @@
       "photoCaption": "The parish where we meet.",
       "photoCredit": "Photo"
     },
-    "contacts": {
-      "location": "Where to find us",
-      "parish": "Parish of Cristo Re",
-      "map": "Open the map",
-      "parishPage": "Our group on the parish website",
-      "title": "Contact us",
-      "intro": "For information and registration, email us at",
-      "instagram": "Follow us on Instagram:",
-      "official": "For official correspondence: certified email (PEC)"
+    "intro": {
+      "title": "Scouting at Cristo Re",
+      "text": "We are Padova 6, an AGESCI scout group whose story goes back to the late 1960s. We meet on Sundays at the parish of Cristo Re and, about once a month, each unit goes on an outing.",
+      "facts": {
+        "ages": {
+          "value": "8–21",
+          "label": "years old, from Cubs to Rovers"
+        },
+        "units": {
+          "value": "5",
+          "label": "units: Pack, two Troops, Novitiate and Clan"
+        },
+        "sunday": {
+          "value": "Sunday",
+          "label": "activity day for the Pack and the Troops"
+        },
+        "monthly": {
+          "value": "Every month",
+          "label": "a hunt, a bivouac or an outing"
+        }
+      },
+      "more": "Discover Padova 6",
+      "cards": {
+        "about": {
+          "title": "About us",
+          "text": "Our story, the scout method and the leaders who guide our girls and boys.",
+          "cta": "Read our story"
+        },
+        "path": {
+          "title": "Scout journey",
+          "text": "Pack, Troops, Novitiate and Clan: how scouting is lived from 8 to 21.",
+          "cta": "Meet our units"
+        },
+        "contacts": {
+          "title": "Contact us",
+          "text": "Where to find us, how to write to us and where to follow us.",
+          "cta": "Write to us"
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "About us",
+    "lead": "Padova 6 is a scout group of AGESCI, the Italian Catholic Guides and Scouts Association. We support girls and boys aged 8 to 21 at the parish of Cristo Re in Padova.",
+    "history": {
+      "title": "Our story",
+      "y1968": "The presumed founding year. The group starts as Padova 2, an offshoot of the San Francesco section in central Padova.",
+      "y1981": "Now called Padova 6, the group is large enough to expand into the nearby parish of Santa Rita, with a second pack and two new troops, one for boys and one for girls. The Rover and Ranger branch stays a single unit.",
+      "y2002": "Fewer leaders and young people lead to closing the Santa Rita units. The group takes its current shape: the Candida Luna Pack, the Enterprise and Orione troops, the Novitiate and the Pioggia Battente Clan.",
+      "y2022": "On 28 December the group is entered in the national Third Sector register (RUNTS) as a social promotion association.",
+      "source": "Dates up to 2002 come from the group page on"
     },
-    "about": {
-      "title": "About us",
-      "description": "We are part of AGESCI, the Italian Catholic Guides and Scouts Association. We support girls and boys aged 8 to 21 through the scout method: outdoor activities, community life and service to others.",
-      "leaders": "Our unit leaders are volunteer educators trained by the association. We meet at the parish of Cristo Re in Padova."
+    "method": {
+      "title": "The scout method",
+      "intro": "Scouting comes from an idea of Baden-Powell: you grow by doing, together with others and outdoors. AGESCI turns that idea into a method.",
+      "doing": {
+        "title": "Learning by doing",
+        "text": "Building, finding your way, cooking at camp, running a project: you learn by getting your hands on it."
+      },
+      "outdoors": {
+        "title": "Outdoor life",
+        "text": "Woods, meadows and trails are where we play, hike and spend time together."
+      },
+      "groups": {
+        "title": "Small groups",
+        "text": "Sixes in the Pack, patrols in the Troop: everyone has a place and a responsibility towards the others."
+      },
+      "growth": {
+        "title": "Personal growth",
+        "text": "Everyone follows their own path, with goals chosen together with the leaders and suited to their age."
+      },
+      "service": {
+        "title": "Service",
+        "text": "Doing your best for others, from the Cubs’ good turn to the Clan’s volunteering."
+      },
+      "faith": {
+        "title": "Faith",
+        "text": "AGESCI is a Catholic association: faith is part of the journey and is lived in the community and in the parish."
+      }
     },
-    "path": {
-      "title": "From 8 to 21 years old",
+    "leaders": {
+      "title": "Our leaders",
+      "text": "Our leaders are volunteer educators, trained through AGESCI programmes. Each unit has its own leaders, who prepare the activities and follow the growth of every young person.",
+      "community": "Together they form the Leaders’ Council, which runs the group and writes its educational plan."
+    }
+  },
+  "path": {
+    "title": "The scout journey",
+    "lead": "From Cubs to Rovers and Rangers: how scouting is lived in the five units of Padova 6.",
+    "timeline": {
+      "title": "Three stages, from 8 to 21",
       "intro": "The scout journey has three stages. Each has its own unit, leaders and way of experiencing adventure.",
       "years": "years",
       "pack": {
@@ -56,6 +130,76 @@
         "title": "Novitiate and Clan",
         "description": "Rovers and rangers choose a path of hiking, community and service."
       }
+    },
+    "units": {
+      "title": "Our units",
+      "whenLabel": "When",
+      "pack": {
+        "name": "Candida Luna Pack",
+        "who": "Cubs · ages 8–11",
+        "text": "The Pack lives its adventure in the world of Rudyard Kipling’s The Jungle Book: children grow through play and learn to do their best together with others.",
+        "groupsLabel": "The sixes",
+        "groups": "Black, Brown, Piebald, Tawny, White and Grey.",
+        "when": "On Sundays and, about once a month, a hunt: a one-day outing."
+      },
+      "troops": {
+        "name": "Enterprise and Orione Troops",
+        "who": "Scouts and Guides · ages 12–16",
+        "text": "The group has two parallel troops: Enterprise for boys and Orione for girls. In the Troop, life is organised in patrols, small groups led by one of the older members, and everyone learns the scout skills needed for projects and camps.",
+        "groupsLabel": "The patrols",
+        "groups": "Enterprise: Cheetahs, Eagles and Wolves. Orione: Swallows, Dolphins and Lions.",
+        "when": "On Sundays and, about once a month, a bivouac, usually from Saturday afternoon to Sunday afternoon."
+      },
+      "novitiate": {
+        "name": "Novitiate",
+        "who": "Ages 16–17 · third year of high school",
+        "text": "A transition year between the Troop and the Clan. It is the time to discover the three words of the Clan: road, community and service."
+      },
+      "clan": {
+        "name": "Pioggia Battente Clan",
+        "who": "Rovers and Rangers · ages 17–21",
+        "text": "The Clan lives scouting through the road, community and service. The journey ends with the Departure: the choice to carry scout values into adult life.",
+        "when": "A meeting every week, not on Sundays. Plus outings, bivouacs and volunteering."
+      }
+    },
+    "schedule": {
+      "title": "When we meet",
+      "sunday": {
+        "when": "On Sundays",
+        "what": "Pack and Troop activities"
+      },
+      "weekly": {
+        "when": "Every week",
+        "what": "Clan meeting"
+      },
+      "monthly": {
+        "when": "About once a month",
+        "what": "Pack hunt, Troop bivouac, Clan outings"
+      }
+    },
+    "join": {
+      "title": "Want to join us?",
+      "text": "Write to us and we will explain how registration works.",
+      "cta": "Contact us"
+    }
+  },
+  "contacts": {
+    "title": "Contact us",
+    "lead": "For information and registration, the easiest way is to send us an email.",
+    "location": {
+      "title": "Where to find us",
+      "parish": "Parish of Cristo Re",
+      "map": "Open the map"
+    },
+    "write": {
+      "title": "Write to us",
+      "intro": "For information and registration",
+      "official": "For official correspondence: certified email (PEC)",
+      "parishPage": "Our group on the parish website"
+    },
+    "follow": {
+      "title": "Follow us",
+      "on": "Padova 6 on {{name}}"
     }
   },
   "errors": {

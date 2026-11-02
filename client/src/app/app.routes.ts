@@ -8,17 +8,17 @@ export const routes: Routes = [
   },
   {
     path: 'chi-siamo',
-    loadComponent: () => import('./pages/sections/section-pages').then((m) => m.AboutPage),
+    loadComponent: () => import('./pages/about/about-page').then((m) => m.AboutPage),
     title: 'Chi siamo - AGESCI Padova 6',
   },
   {
     path: 'cammino',
-    loadComponent: () => import('./pages/sections/section-pages').then((m) => m.PathPage),
+    loadComponent: () => import('./pages/path/path-page').then((m) => m.PathPage),
     title: 'Il cammino scout - AGESCI Padova 6',
   },
   {
     path: 'contatti',
-    loadComponent: () => import('./pages/sections/section-pages').then((m) => m.ContactPage),
+    loadComponent: () => import('./pages/contact/contact-page').then((m) => m.ContactPage),
     title: 'Contatti - AGESCI Padova 6',
   },
   {

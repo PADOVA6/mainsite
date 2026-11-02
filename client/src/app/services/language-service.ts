@@ -1,6 +1,8 @@
 import { inject, Injectable } from '@angular/core';
-import { getBrowserLang, Translation, TranslocoService } from '@jsverse/transloco';
+import { getBrowserLang, TranslocoService } from '@jsverse/transloco';
 import { PrimeNG } from 'primeng/config';
+import { take } from 'rxjs';
+import { readPreference, writePreference } from './preference-storage';
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +25,7 @@ export class LanguageService {
 
   private determineLanguage(): string {
     // 1. Priorità al localStorage
-    const savedLang = localStorage.getItem('user-lang');
+    const savedLang = readPreference('user-lang');
     if (savedLang && this.availableLangs.includes(savedLang)) {
       return savedLang;
     }
@@ -39,10 +41,12 @@ export class LanguageService {
   }
 
   setLanguage(lang: string) {
-    if (!this.availableLangs.includes(lang)) return;
+    if (!this.availableLangs.includes(lang)) {
+      throw new Error(`Unsupported language: ${lang}`);
+    }
 
     // Persistenza e stato Transloco
-    localStorage.setItem('user-lang', lang);
+    writePreference('user-lang', lang);
     this.translocoService.setActiveLang(lang);
 
     // Aggiornamento DOM e PrimeNG
@@ -51,11 +55,14 @@ export class LanguageService {
   }
 
   private syncPrimeNG(lang: string) {
-    this.translocoService.selectTranslation(lang).subscribe(labels => {
-      if (labels['primeng']) {
-        this.primeng.setTranslation(labels['primeng']);
-      }
-    });
+    this.translocoService
+      .selectTranslation(lang)
+      .pipe(take(1))
+      .subscribe((labels) => {
+        if (labels['primeng']) {
+          this.primeng.setTranslation(labels['primeng']);
+        }
+      });
   }
 
   get currentLang() {

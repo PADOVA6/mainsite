@@ -1,0 +1,59 @@
+<nav
+  class="site-nav"
+  [attr.aria-label]="t('label')"
+  (keydown.escape)="closeMenu(true)"
+  *transloco="let t; prefix: 'nav'"
+>
+  <div class="wrap nav-layout">
+    <a class="brand" routerLink="/" (click)="closeMenu()" [attr.aria-label]="t('home')">
+      <img src="logo-padova6.png" width="499" height="600" alt="" />
+    </a>
+    <button
+      #menuToggle
+      class="nav-button menu-toggle"
+      type="button"
+      aria-controls="site-navigation"
+      [attr.aria-expanded]="menuOpen()"
+      [attr.aria-label]="t(menuOpen() ? 'closeMenu' : 'openMenu')"
+      (click)="menuOpen.set(!menuOpen())"
+    >
+      <span [class]="menuOpen() ? 'pi pi-times' : 'pi pi-bars'" aria-hidden="true"></span>
+      <span>{{ t('menu') }}</span>
+    </button>
+    <div id="site-navigation" class="navigation" [class.is-open]="menuOpen()">
+      <ul class="nav-links">
+        <li>
+          <a routerLink="/" fragment="chi-siamo" (click)="closeMenu()">{{ t('about') }}</a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="cammino" (click)="closeMenu()">{{ t('path') }}</a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="contatti" (click)="closeMenu()">{{ t('contacts') }}</a>
+        </li>
+      </ul>
+      <div class="preferences">
+        <button
+          class="nav-button"
+          type="button"
+          [attr.aria-label]="t(theme.isDark() ? 'useLight' : 'useDark')"
+          [title]="t(theme.isDark() ? 'useLight' : 'useDark')"
+          (click)="theme.toggle()"
+        >
+          <span [class]="theme.isDark() ? 'pi pi-sun' : 'pi pi-moon'" aria-hidden="true"></span>
+        </button>
+        <button
+          type="button"
+          class="nav-button"
+          [attr.aria-label]="t(language.currentLang === 'it' ? 'useEnglish' : 'useItalian')"
+          [title]="t(language.currentLang === 'it' ? 'useEnglish' : 'useItalian')"
+          (click)="language.setLanguage(language.currentLang === 'it' ? 'en' : 'it')"
+        >
+          <span [attr.lang]="language.currentLang === 'it' ? 'en' : 'it'">
+            {{ language.currentLang === 'it' ? 'EN' : 'IT' }}
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, isDevMode } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { routes } from './app.routes';
 
@@ -13,7 +13,7 @@ import { provideTransloco } from '@jsverse/transloco';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(routes, withInMemoryScrolling({ anchorScrolling: 'enabled' })),
     provideHttpClient(),
     provideTransloco({
       config: {
@@ -48,6 +48,14 @@ export const appConfig: ApplicationConfig = {
                   inverseColor: '#ffffff',
                   hoverColor: '{primary.900}',
                   activeColor: '{primary.950}',
+                },
+              },
+              dark: {
+                primary: {
+                  color: '{primary.300}',
+                  inverseColor: '#1e1636',
+                  hoverColor: '{primary.200}',
+                  activeColor: '{primary.100}',
                 },
               },
             },

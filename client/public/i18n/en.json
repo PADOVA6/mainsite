@@ -1,13 +1,28 @@
 {
+  "nav": {
+    "label": "Main navigation",
+    "home": "Padova 6 - Home",
+    "about": "About us",
+    "path": "Scout journey",
+    "contacts": "Contact us",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "useEnglish": "Switch to English",
+    "useItalian": "Switch to Italian",
+    "useLight": "Switch to light theme",
+    "useDark": "Switch to dark theme"
+  },
   "home": {
     "skip": "Skip to content",
     "hero": {
-      "logoAlt": "AGESCI Padova 6 scout group logo: scout fleur-de-lis with AGESCI and Padova 6 lettering",
       "group": "AGESCI scout group",
       "subtitle": "Girls and boys aged 8 to 21, at the parish of Cristo Re in Padova.",
       "write": "Email us",
       "location": "Where to find us",
-      "address": "Parish of Cristo Re · Via Sant’Osvaldo 4, Padova"
+      "address": "Parish of Cristo Re · Via Sant’Osvaldo 4, Padova",
+      "photoAlt": "The facade of the church of Cristo Re e Sant’Osvaldo in Padova, with its bell tower among the trees.",
+      "photoCaption": "The parish where we meet."
     },
     "contacts": {
       "location": "Where to find us",

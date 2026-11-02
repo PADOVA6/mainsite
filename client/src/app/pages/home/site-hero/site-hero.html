@@ -1,13 +1,5 @@
 <header class="testata" *transloco="let t; prefix: 'home.hero'">
   <div class="wrap">
-    <img
-      class="logo"
-      src="logo-padova6.png"
-      width="499"
-      height="600"
-      [alt]="t('logoAlt')"
-      fetchpriority="high"
-    />
     <div>
       <h1>
         <span class="nome-esteso">{{ t('group') }}</span
@@ -29,5 +21,17 @@
         <a href="#dove">{{ t('address') }}</a>
       </address>
     </div>
+    <figure class="foto-parrocchia">
+      <img
+        src="cristo-re-padova.jpg"
+        width="960"
+        height="960"
+        [alt]="t('photoAlt')"
+        fetchpriority="high"
+      />
+      <figcaption>
+        <span class="foto-luogo">{{ t('photoCaption') }}</span>
+      </figcaption>
+    </figure>
   </div>
 </header>

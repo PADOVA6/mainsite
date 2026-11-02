@@ -2,6 +2,8 @@
 @import 'tailwindcss-primeui';
 @import 'primeicons/primeicons.css';
 
+@custom-variant dark (&:where(.my-app-dark, .my-app-dark *));
+
 @font-face {
   font-family: 'Overpass';
   src: url('/fonts/overpass-latin-400-normal.woff2') format('woff2');
@@ -32,8 +34,24 @@
   --lavanda: #f3f0fa;
   --carta: #fff;
   --testo-tenue: #5a5370;
+  --bordo: #d7d0e5;
+  --su-primario: #fff;
+  --viola-brand: #3f2177;
   --misura: 40rem;
   --pagina: 68rem;
+  color-scheme: light;
+}
+
+:root.my-app-dark {
+  --viola: #ad93d8;
+  --blu: #a4c4ff;
+  --inchiostro: #f0eaf8;
+  --lavanda: #241d33;
+  --carta: #181320;
+  --testo-tenue: #c0b5d1;
+  --bordo: #51445f;
+  --su-primario: #1e1636;
+  color-scheme: dark;
 }
 
 *,
@@ -125,7 +143,7 @@ p {
   gap: 0.75rem;
 }
 .azioni .p-button {
-  color: #fff;
+  color: var(--su-primario);
   font-family: inherit;
   font-weight: 700;
   text-decoration: none;

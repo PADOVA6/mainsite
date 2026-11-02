@@ -11,7 +11,8 @@
     "useEnglish": "Switch to English",
     "useItalian": "Switch to Italian",
     "useLight": "Switch to light theme",
-    "useDark": "Switch to dark theme"
+    "useDark": "Switch to dark theme",
+    "mission": "Mission"
   },
   "home": {
     "skip": "Skip to content",
@@ -62,6 +63,11 @@
           "title": "Contact us",
           "text": "Where to find us, how to write to us and where to follow us.",
           "cta": "Write to us"
+        },
+        "mission": {
+          "title": "Our mission",
+          "text": "The purpose of AGESCI, the Scout Law, the Promise and the scout mottos.",
+          "cta": "Discover our values"
         }
       }
     }
@@ -109,6 +115,88 @@
       "title": "Our leaders",
       "text": "Our leaders are volunteer educators, trained through AGESCI programmes. Each unit has its own leaders, who prepare the activities and follow the growth of every young person.",
       "community": "Together they form the Leaders’ Council, which runs the group and writes its educational plan."
+    }
+  },
+  "mission": {
+    "title": "Our mission",
+    "lead": "Why we do scouting and what we believe in: the AGESCI values we live at Padova 6.",
+    "purpose": {
+      "title": "Our purpose",
+      "quote": "To contribute, following the principle of self-education, to the growth of young people as meaningful and happy persons.",
+      "source": "AGESCI Association Pact (translated)",
+      "text": "Self-education means that girls and boys lead their own growth: they discover, try and choose, with their leaders beside them. Every activity of the group, from the Pack’s hunt to the Clan’s service, comes from this purpose."
+    },
+    "choices": {
+      "title": "The three choices",
+      "intro": "The Association Pact is the document every AGESCI leader commits to. It rests on three choices.",
+      "scout": {
+        "title": "The scout choice",
+        "text": "“Leaders bear witness to their personal commitment to the Scout Law and Promise.” They offer young people the scout method, where play, adventure and discovery become chances to grow."
+      },
+      "christian": {
+        "title": "The Christian choice",
+        "text": "Leaders welcome the message of Christ and bear witness to it with their own lives. In the group, faith is lived together, in the community and in the parish."
+      },
+      "political": {
+        "title": "The political choice",
+        "text": "“The choice of political action is an essential commitment that defines us as citizens”: educating young people to take an active and responsible part in caring for the common good."
+      }
+    },
+    "law": {
+      "title": "The Scout Law",
+      "intro": "The Law says in simple words how a Guide or a Scout lives. In AGESCI it has ten articles.",
+      "subject": "Guides and Scouts:",
+      "a1": "place their honour in being worthy of trust;",
+      "a2": "are loyal;",
+      "a3": "make themselves useful and help others;",
+      "a4": "are friends to all and brothers and sisters to every other Guide and Scout;",
+      "a5": "are courteous;",
+      "a6": "love and respect nature;",
+      "a7": "know how to obey;",
+      "a8": "smile and sing even in difficulties;",
+      "a9": "are hard-working and thrifty;",
+      "a10": "are pure in thought, word and deed.",
+      "pack": {
+        "title": "The Law of the Pack",
+        "intro": "Cubs have their own Law, in two articles:",
+        "a1": "The Cub thinks of others as of himself.",
+        "a2": "The Cub lives with joy and loyalty together with the Pack."
+      }
+    },
+    "promise": {
+      "title": "The Promise",
+      "intro": "With the Promise, everyone freely chooses to commit to living the Law. Scouts and Guides say it with these words:",
+      "opening": "With God’s help, I promise on my honour to do my best:",
+      "p1": "to do my duty to God and to my country;",
+      "p2": "to help other people at all times;",
+      "p3": "to keep the Scout Law.",
+      "pack": "Cubs have their own words: “I promise, with the help and example of Jesus, to do my best to improve myself, to help others and to keep the Law of the Pack.”"
+    },
+    "mottos": {
+      "title": "The mottos",
+      "intro": "Each branch has its own motto. The motto of the association is “Be prepared”.",
+      "pack": {
+        "motto": "Our best",
+        "who": "Cubs · Del nostro meglio"
+      },
+      "troop": {
+        "motto": "Be prepared",
+        "who": "Scouts and Guides · Sii preparato"
+      },
+      "clan": {
+        "motto": "To serve",
+        "who": "Rovers and Rangers · Servire"
+      }
+    },
+    "bp": {
+      "quote": "Try and leave this world a little better than you found it.",
+      "source": "Robert Baden-Powell, founder of Scouting, in his last message to Scouts"
+    },
+    "sources": {
+      "label": "Sources:",
+      "rules": "Law, Promise and mottos from the",
+      "pact": "purpose and choices from the AGESCI Association Pact. English translations are ours.",
+      "rulesLink": "AGESCI Methodological Regulations (updated at the 2026 General Council);"
     }
   },
   "path": {

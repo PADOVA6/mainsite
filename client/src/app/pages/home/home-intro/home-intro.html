@@ -16,7 +16,7 @@
   <section class="sezione" aria-labelledby="scopri-titolo">
     <div class="wrap">
       <h2 id="scopri-titolo">{{ t('more') }}</h2>
-      <ul class="griglia">
+      <ul class="griglia griglia--4">
         @for (card of cards; track card.key) {
           <li>
             <a class="scheda scheda--link" [routerLink]="card.link">

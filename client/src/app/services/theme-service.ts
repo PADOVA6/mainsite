@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { DestroyRef, inject, Injectable, signal } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { DestroyRef, inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
 import { readPreference, writePreference } from './preference-storage';
 
 type ThemePreference = 'system' | 'light' | 'dark';
@@ -8,9 +8,10 @@ type ThemePreference = 'system' | 'light' | 'dark';
 export class ThemeService {
   private readonly document = inject(DOCUMENT);
   private readonly destroyRef = inject(DestroyRef);
-  private readonly systemTheme = this.document.defaultView?.matchMedia(
-    '(prefers-color-scheme: dark)',
-  );
+  // Durante la pre-renderizzazione non c'è matchMedia: la pagina viene generata col tema chiaro
+  private readonly systemTheme = isPlatformBrowser(inject(PLATFORM_ID))
+    ? this.document.defaultView?.matchMedia('(prefers-color-scheme: dark)')
+    : undefined;
   private readonly preference = signal<ThemePreference>('system');
   private readonly dark = signal(false);
   readonly isDark = this.dark.asReadonly();

@@ -1,8 +1,0 @@
-# file del repository da non pubblicare come parte del sito
-.git
-.github
-.gitignore
-.assetsignore
-wrangler.jsonc
-README.md
-LICENSE

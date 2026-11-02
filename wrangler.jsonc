@@ -2,10 +2,14 @@
   // Sito statico di AGESCI Gruppo Padova 6 servito con Workers static assets
   "name": "mainsite",
   "compatibility_date": "2026-11-01",
+  // compila Angular prima di ogni deploy e di ogni anteprima delle PR (lo esegue wrangler, anche su Cloudflare)
+  "build": {
+    "command": "cd client && npm ci && npm run build"
+  },
   "assets": {
-    // i file del sito sono nella cartella docs
-    "directory": "./docs",
-    // per gli indirizzi inesistenti serve docs/404.html (la pagina "non trovata" pre-renderizzata)
+    // output di `npm run build` (vedi "build" qui sopra)
+    "directory": "./client/dist/client/browser",
+    // per gli indirizzi inesistenti serve 404.html (la pagina "non trovata" pre-renderizzata)
     "not_found_handling": "404-page"
   },
   // richiesto da Cloudflare per le anteprime delle PR ("npx wrangler preview" sui branch diversi da main)

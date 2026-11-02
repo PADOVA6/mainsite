@@ -9,7 +9,10 @@ npm run build
 ```
 
 Il server di sviluppo risponde su `http://localhost:4200`.
-La build di produzione viene generata in `dist/client/browser`.
+La build di produzione viene generata in `dist/client/browser`: le pagine sono pre-renderizzate
+(`outputMode: "static"`) e lo script `postbuild` crea `404.html` dalla pagina "non trovata".
+Non serve fare il build prima di committare: lo esegue Cloudflare a ogni push
+(vedi il [README principale](../README.md)).
 Non sono ancora configurati runner per test unitari o end-to-end.
 
 ## Struttura

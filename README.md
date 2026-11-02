@@ -12,6 +12,7 @@ nel repository c'è solo il codice sorgente, l'output del build non va committat
 - Ogni modifica passa da una pull request verso `main`. Cloudflare compila il branch e
   pubblica un'anteprima, il cui link compare nei controlli della PR.
 - Dopo il merge su `main`, Cloudflare compila e pubblica pd6.it automaticamente.
-- Build command (impostato nella dashboard Cloudflare, Settings → Build):
-  `cd client && npm ci && npm run build`. Il deploy usa [wrangler.jsonc](wrangler.jsonc).
+- Il build è definito in [wrangler.jsonc](wrangler.jsonc) (`build.command`: `cd client && npm ci && npm run build`):
+  wrangler lo esegue prima di ogni deploy e di ogni anteprima, quindi nella dashboard
+  Cloudflare il campo "Build command" può restare vuoto.
 - Chiavi API e altri segreti vanno nelle variabili/segreti di Cloudflare, mai nel repository.

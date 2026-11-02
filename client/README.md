@@ -55,7 +55,7 @@ La [foto di Cristo Re](public/cristo-re-padova.jpg) e' di Cmcmcm1, da
 [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Padova,_Cristo_Re_e_Sant%27Osvaldo,_exterior_(1).jpg>),
 con licenza [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 La copia locale e' la versione ridimensionata a 960 x 960 px fornita da Commons,
-senza ulteriori modifiche; autore, fonte e licenza sono visibili nel footer.
+senza ulteriori modifiche; autore, fonte e licenza sono indicati nella didascalia sotto la foto.
 Colori e regole condivise sono in [styles.css](src/styles.css); il tema PrimeNG
 usa la stessa palette viola in [app.config.ts](src/app/app.config.ts).
 

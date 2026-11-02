@@ -4,63 +4,49 @@
 
 @custom-variant dark (&:where(.my-app-dark, .my-app-dark *));
 
+/*
+ * Roboto è il font dell'identità visiva AGESCI (Manuale Immagine Coordinata 2016, "Tipografia":
+ * Regular, Light, Medium, Bold). Tahoma, indicato come alternativa, è un font di sistema Windows
+ * e compare solo nell'elenco dei font di ripiego.
+ */
 @font-face {
-  font-family: 'Overpass';
-  src: url('/fonts/overpass-latin-400-normal.woff2') format('woff2');
+  font-family: 'Roboto';
+  src: url('/fonts/roboto-latin-400-normal.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Overpass';
-  src: url('/fonts/overpass-latin-700-normal.woff2') format('woff2');
+  font-family: 'Roboto';
+  src: url('/fonts/roboto-latin-700-normal.woff2') format('woff2');
   font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Overpass';
-  src: url('/fonts/overpass-latin-900-normal.woff2') format('woff2');
-  font-weight: 900;
   font-display: swap;
 }
 
 /*
- * Font di riserva con le misure di Overpass: finché Overpass non è caricato il testo usa Arial
+ * Font di riserva con le misure di Roboto: finché Roboto non è caricato il testo usa Arial
  * (o Liberation Sans, metricamente identico) ridimensionato in modo da occupare lo stesso spazio,
- * così al cambio di font il testo non si sposta. Valori calcolati dai file di Overpass.
+ * così al cambio di font il testo non si sposta. Valori calcolati dai file di Roboto.
  */
 @font-face {
-  font-family: 'Overpass Fallback';
+  font-family: 'Roboto Fallback';
   src: local('Arial'), local('ArialMT'), local('Liberation Sans'), local('LiberationSans');
   font-weight: 400;
-  size-adjust: 98.14%;
-  ascent-override: 89.97%;
-  descent-override: 39.03%;
+  size-adjust: 98.25%;
+  ascent-override: 94.43%;
+  descent-override: 24.85%;
   line-gap-override: 0%;
 }
 
 @font-face {
-  font-family: 'Overpass Fallback';
+  font-family: 'Roboto Fallback';
   src:
     local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'),
     local('LiberationSans-Bold');
   font-weight: 700;
-  size-adjust: 97.17%;
-  ascent-override: 90.87%;
-  descent-override: 39.41%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Overpass Fallback';
-  src:
-    local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'),
-    local('LiberationSans-Bold');
-  font-weight: 900;
-  size-adjust: 100.12%;
-  ascent-override: 88.2%;
-  descent-override: 38.26%;
+  size-adjust: 94.02%;
+  ascent-override: 98.67%;
+  descent-override: 25.97%;
   line-gap-override: 0%;
 }
 
@@ -107,8 +93,9 @@ body {
   background: var(--carta);
   color: var(--inchiostro);
   font-family:
-    'Overpass',
-    'Overpass Fallback',
+    'Roboto',
+    'Roboto Fallback',
+    Tahoma,
     system-ui,
     -apple-system,
     'Segoe UI',
@@ -140,7 +127,7 @@ a:not(.p-button) {
 h1,
 h2,
 h3 {
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.05;
   margin: 0;
   color: var(--viola);

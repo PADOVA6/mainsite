@@ -38,7 +38,7 @@ mainsite/
     │   └── postbuild.mjs     Crea 404.html dopo ogni build
     ├── public/               File copiati così come sono nel sito
     │   ├── i18n/             Testi del sito: it.json, en.json
-    │   ├── fonts/            Font Overpass (licenza OFL)
+    │   ├── fonts/            Font Roboto (licenza OFL)
     │   └── *.png, *.jpg      Logo, icone, foto
     └── src/
         ├── index.html        Pagina base: titolo, meta tag, favicon
@@ -87,6 +87,18 @@ I link della navbar portano alle ancore, che si possono usare anche da fuori, pe
   per la lingua. Sotto i 960 px diventa un menu a scomparsa.
 - **`SiteFooter`**: dati legali dell'associazione (codice fiscale, iscrizione al RUNTS, sede
   legale). Restano in italiano anche quando il sito è in inglese.
+
+### Identità visiva
+
+Il riferimento per font e colori è il
+[Manuale dell'immagine coordinata AGESCI](https://www.agesci.it/download/ufficiostampa/immagine_coordinata_agesci/Manuale-Immagine_Coordinata_2016.pdf):
+
+- **Font:** Roboto, nei pesi Regular (400) e Bold (700), incluso nel sito in `client/public/fonts`.
+  Il manuale prevede anche Light e Medium. Tahoma, indicato come alternativa quando Roboto non c'è,
+  compare nell'elenco dei font di ripiego.
+- I font si caricano in anticipo (`<link rel="preload">` in `index.html`). Finché non sono
+  disponibili si usa "Roboto Fallback", cioè Arial con le misure di Roboto, così il testo non si
+  sposta al caricamento.
 
 ### Lingua e tema
 
@@ -291,8 +303,8 @@ temporaneamente, perché restano nella storia di git.
 
 ## Licenza
 
-Il codice è distribuito con licenza [GPL-3.0](LICENSE). I font Overpass sono distribuiti con
-licenza SIL Open Font License (`client/public/fonts/OFL.txt`). Il logo AGESCI, il logo del gruppo
+Il codice è distribuito con licenza [GPL-3.0](LICENSE). Il font Roboto è distribuito con licenza
+SIL Open Font License (`client/public/fonts/OFL.txt`). Il logo AGESCI, il logo del gruppo
 e le fotografie appartengono ai rispettivi titolari e non sono coperti dalla licenza del codice.
 
 Per contatti: [padova6@veneto.agesci.it](mailto:padova6@veneto.agesci.it).

@@ -7,6 +7,21 @@ export const routes: Routes = [
     title: 'Gruppo scout AGESCI Padova 6',
   },
   {
+    path: 'chi-siamo',
+    loadComponent: () => import('./pages/sections/section-pages').then((m) => m.AboutPage),
+    title: 'Chi siamo - AGESCI Padova 6',
+  },
+  {
+    path: 'cammino',
+    loadComponent: () => import('./pages/sections/section-pages').then((m) => m.PathPage),
+    title: 'Il cammino scout - AGESCI Padova 6',
+  },
+  {
+    path: 'contatti',
+    loadComponent: () => import('./pages/sections/section-pages').then((m) => m.ContactPage),
+    title: 'Contatti - AGESCI Padova 6',
+  },
+  {
     path: 'page-not-found',
     loadComponent: () =>
       import('./pages/errors/page-not-found/page-not-found').then((m) => m.PageNotFound),

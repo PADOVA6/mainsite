@@ -64,6 +64,9 @@ mainsite/
 | Indirizzo | Contenuto |
 |---|---|
 | `/` | Home, composta da quattro sezioni (vedi sotto) |
+| `/chi-siamo` | Pagina "Chi siamo" (`AboutSection`) |
+| `/cammino` | Pagina "Il cammino" (`ScoutPath`) |
+| `/contatti` | Pagina "Contatti" (`ContactSection`) |
 | `/page-not-found` | Pagina "non trovata" |
 | qualsiasi altro indirizzo | Risposta 404 con la pagina "non trovata" |
 
@@ -78,7 +81,8 @@ Nell'ordine in cui compaiono:
 | `ScoutPath` | `#cammino` | Le tre fasce d'età: Branco, Reparto, Noviziato e Clan |
 | `ContactSection` | `#dove`, `#contatti` | Sede, mappa, pagina sul sito della parrocchia, email, Instagram e PEC |
 
-I link della navbar portano alle ancore, che si possono usare anche da fuori, per esempio
+I link della navbar portano alle pagine singole, pre-renderizzate come la home (sono in
+`src/app/pages/sections`). Le ancore della home funzionano ancora, per esempio
 `https://pd6.it/#contatti`.
 
 ### Parti comuni
@@ -101,7 +105,7 @@ Il riferimento per font e colori è il
   sposta al caricamento.
 - **Corda:** la linea a strisce sotto la testata e sopra il footer (classe `corda` in
   `src/styles.css`) riprende la corda del logo. Ha i colori del gruppo, presi dall'anello del
-  logo: giallo `#ffff00` e blu `#0046c6`. Sono le variabili `--giallo-gruppo` e `--blu-gruppo`,
+  logo (`#ffff00` e `#0046c6`) in una versione più tenue: giallo `#e8c95a` e blu `#3a5f9f`. Sono le variabili `--giallo-gruppo` e `--blu-gruppo`,
   uguali in tema chiaro e scuro.
 
 ### Lingua e tema

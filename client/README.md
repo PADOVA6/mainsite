@@ -50,7 +50,7 @@ sincronizzando i colori del sito con quelli dei componenti PrimeNG.
 
 I testi della home seguono il sistema Transloco esistente:
 [italiano](public/i18n/it.json) e [inglese](public/i18n/en.json).
-Logo, favicon e font Overpass sono locali in [public](public), insieme alla licenza dei font.
+Logo, favicon e font Roboto sono locali in [public](public), insieme alla licenza dei font.
 La [foto di Cristo Re](public/cristo-re-padova.jpg) e' di Cmcmcm1, da
 [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Padova,_Cristo_Re_e_Sant%27Osvaldo,_exterior_(1).jpg>),
 con licenza [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

@@ -1,0 +1,9 @@
+# Il sito viene compilato da Cloudflare a ogni push: l'output non va nel repository
+/client/dist/
+/docs/
+/client/docs/
+
+# Wrangler (sviluppo locale)
+.wrangler/
+.dev.vars*
+.env*

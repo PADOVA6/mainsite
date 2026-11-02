@@ -1,0 +1,49 @@
+<ng-container *transloco="let t; prefix: 'about'">
+  <header class="testata-pagina">
+    <div class="wrap">
+      <h1>{{ t('title') }}</h1>
+      <p class="lead">{{ t('lead') }}</p>
+    </div>
+  </header>
+  <div class="corda" aria-hidden="true"></div>
+  <main id="contenuto" tabindex="-1">
+    <section class="sezione sezione--lavanda" aria-labelledby="storia-titolo">
+      <div class="wrap">
+        <h2 id="storia-titolo">{{ t('history.title') }}</h2>
+        <ol class="storia">
+          @for (item of history; track item.key) {
+            <li>
+              <span class="anno">{{ item.year }}</span>
+              <p>{{ t('history.' + item.key) }}</p>
+            </li>
+          }
+        </ol>
+        <p class="fonte">
+          {{ t('history.source') }}
+          <a href="https://it.scoutwiki.org/Padova_6_AGESCI" lang="it">ScoutWiki</a>.
+        </p>
+      </div>
+    </section>
+    <section class="sezione" aria-labelledby="metodo-titolo">
+      <div class="wrap">
+        <h2 id="metodo-titolo">{{ t('method.title') }}</h2>
+        <p>{{ t('method.intro') }}</p>
+        <ul class="griglia">
+          @for (item of method; track item) {
+            <li class="scheda">
+              <h3>{{ t('method.' + item + '.title') }}</h3>
+              <p>{{ t('method.' + item + '.text') }}</p>
+            </li>
+          }
+        </ul>
+      </div>
+    </section>
+    <section class="sezione sezione--lavanda" aria-labelledby="capi-titolo">
+      <div class="wrap">
+        <h2 id="capi-titolo">{{ t('leaders.title') }}</h2>
+        <p>{{ t('leaders.text') }}</p>
+        <p>{{ t('leaders.community') }}</p>
+      </div>
+    </section>
+  </main>
+</ng-container>

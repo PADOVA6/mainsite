@@ -25,4 +25,4 @@ import { CardModule } from 'primeng/card';
     CardModule,
   ],
 })
-export class SharedModule { }
+export class SharedModule {}

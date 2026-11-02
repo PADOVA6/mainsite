@@ -167,6 +167,65 @@ p {
     var(--blu-gruppo) 6.5px 13px
   );
 }
+/* Testata delle pagine interne: titolo e frase introduttiva */
+.testata-pagina {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(2rem, 5vw, 3.5rem);
+}
+.testata-pagina h1 {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.lead {
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+  line-height: 1.5;
+  max-width: 44rem;
+}
+.testata-pagina .lead {
+  margin: 0;
+}
+/* Griglia di schede (metodo, anteprime della home, orari) */
+.griglia {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+.scheda {
+  background: var(--carta);
+  border: 1px solid var(--bordo);
+  border-radius: 1rem;
+  padding: 1.4rem 1.5rem;
+  min-width: 0;
+}
+.scheda h3 {
+  margin-bottom: 0.5rem;
+}
+.scheda p {
+  font-size: 1.05rem;
+}
+.scheda > :last-child {
+  margin-bottom: 0;
+}
+/* Scheda cliccabile per intero: porta a un'altra pagina */
+a.scheda--link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--inchiostro);
+  text-decoration: none;
+}
+a.scheda--link:hover {
+  color: var(--inchiostro);
+  border-color: var(--viola);
+}
+.scheda--link .vai {
+  margin-top: auto;
+  font-weight: 700;
+  color: var(--blu);
+}
 .azioni {
   display: flex;
   flex-wrap: wrap;

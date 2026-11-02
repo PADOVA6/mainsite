@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { SiteHero } from './site-hero/site-hero';
-import { ContactSection } from './contact-section/contact-section';
-import { AboutSection } from './about-section/about-section';
-import { ScoutPath } from './scout-path/scout-path';
+import { HomeIntro } from './home-intro/home-intro';
 
 @Component({
   selector: 'app-home',
-  imports: [SiteHero, ContactSection, AboutSection, ScoutPath],
+  imports: [SiteHero, HomeIntro],
   templateUrl: './home.html',
 })
 export class Home {}

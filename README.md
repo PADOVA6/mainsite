@@ -63,31 +63,29 @@ mainsite/
 
 | Indirizzo | Contenuto |
 |---|---|
-| `/` | Home, composta da quattro sezioni (vedi sotto) |
-| `/chi-siamo` | Pagina "Chi siamo" (`AboutSection`) |
-| `/cammino` | Pagina "Il cammino" (`ScoutPath`) |
-| `/contatti` | Pagina "Contatti" (`ContactSection`) |
+| `/` | Home: testata, presentazione breve con i numeri del gruppo, anteprime delle pagine |
+| `/chi-siamo` | Storia del gruppo, metodo scout, i capi (`pages/about`) |
+| `/cammino` | Le tre tappe, le cinque unità, quando ci troviamo, come unirsi (`pages/path`) |
+| `/contatti` | Dove ci troviamo, Scrivici (email, PEC, pagina sul sito della parrocchia), Seguici (`pages/contact`) |
 | `/page-not-found` | Pagina "non trovata" |
 | qualsiasi altro indirizzo | Risposta 404 con la pagina "non trovata" |
 
-### Sezioni della home
+Tutte le pagine sono pre-renderizzate e hanno un titolo proprio (in `app.routes.ts`). Le pagine
+interne iniziano con la stessa testata (classe `testata-pagina`, titolo e frase introduttiva),
+seguita dalla corda e dalle sezioni. La home non ripete il contenuto delle altre pagine: ne mostra
+solo un'anteprima.
 
-Nell'ordine in cui compaiono:
+Il footer resta in fondo alla finestra anche nelle pagine con poco contenuto (`app.ts`).
 
-| Componente | Ancora | Contenuto |
-|---|---|---|
-| `SiteHero` | | Nome del gruppo, sottotitolo, email, indirizzo, foto della parrocchia |
-| `AboutSection` | `#chi-siamo` | Presentazione del gruppo |
-| `ScoutPath` | `#cammino` | Le tre fasce d'età: Branco, Reparto, Noviziato e Clan |
-| `ContactSection` | `#dove`, `#contatti` | Sede, mappa, pagina sul sito della parrocchia, email, Instagram e PEC |
+I profili social della pagina Contatti sono un elenco in `contact-page.ts`: per aggiungerne uno
+basta una riga con nome, indirizzo e icona di PrimeIcons.
 
-I link della navbar portano alle pagine singole, pre-renderizzate come la home (sono in
-`src/app/pages/sections`). Le ancore della home funzionano ancora, per esempio
-`https://pd6.it/#contatti`.
+Le date della storia del gruppo vengono dalla
+[pagina del gruppo su ScoutWiki](https://it.scoutwiki.org/Padova_6_AGESCI), che la pagina cita.
 
 ### Parti comuni
 
-- **`SiteNavbar`**: logo, collegamenti alle sezioni, pulsante per il tema chiaro/scuro e pulsante
+- **`SiteNavbar`**: logo, collegamenti alle pagine, pulsante per il tema chiaro/scuro e pulsante
   per la lingua. Sotto i 960 px diventa un menu a scomparsa.
 - **`SiteFooter`**: dati legali dell'associazione (codice fiscale, iscrizione al RUNTS, sede
   legale). Restano in italiano anche quando il sito è in inglese.

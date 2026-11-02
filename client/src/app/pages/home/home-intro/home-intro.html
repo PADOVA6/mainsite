@@ -1,0 +1,34 @@
+<ng-container *transloco="let t; prefix: 'home.intro'">
+  <section class="sezione sezione--lavanda" aria-labelledby="intro-titolo">
+    <div class="wrap">
+      <h2 id="intro-titolo">{{ t('title') }}</h2>
+      <p class="lead">{{ t('text') }}</p>
+      <dl class="numeri">
+        @for (fact of facts; track fact) {
+          <div>
+            <dt>{{ t('facts.' + fact + '.value') }}</dt>
+            <dd>{{ t('facts.' + fact + '.label') }}</dd>
+          </div>
+        }
+      </dl>
+    </div>
+  </section>
+  <section class="sezione" aria-labelledby="scopri-titolo">
+    <div class="wrap">
+      <h2 id="scopri-titolo">{{ t('more') }}</h2>
+      <ul class="griglia">
+        @for (card of cards; track card.key) {
+          <li>
+            <a class="scheda scheda--link" [routerLink]="card.link">
+              <h3>{{ t('cards.' + card.key + '.title') }}</h3>
+              <p>{{ t('cards.' + card.key + '.text') }}</p>
+              <span class="vai"
+                >{{ t('cards.' + card.key + '.cta') }} <span aria-hidden="true">→</span></span
+              >
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+</ng-container>

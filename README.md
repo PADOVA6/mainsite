@@ -74,9 +74,9 @@ Nell'ordine in cui compaiono:
 | Componente | Ancora | Contenuto |
 |---|---|---|
 | `SiteHero` | | Nome del gruppo, sottotitolo, email, indirizzo, foto della parrocchia |
-| `ContactSection` | `#contatti` | Sede, mappa, pagina sul sito della parrocchia, email e PEC |
 | `AboutSection` | `#chi-siamo` | Presentazione del gruppo |
 | `ScoutPath` | `#cammino` | Le tre fasce d'età: Branco, Reparto, Noviziato e Clan |
+| `ContactSection` | `#dove`, `#contatti` | Sede, mappa, pagina sul sito della parrocchia, email, Instagram e PEC |
 
 I link della navbar portano alle ancore, che si possono usare anche da fuori, per esempio
 `https://pd6.it/#contatti`.
@@ -99,6 +99,10 @@ Il riferimento per font e colori è il
 - I font si caricano in anticipo (`<link rel="preload">` in `index.html`). Finché non sono
   disponibili si usa "Roboto Fallback", cioè Arial con le misure di Roboto, così il testo non si
   sposta al caricamento.
+- **Corda:** la linea a strisce sotto la testata e sopra il footer (classe `corda` in
+  `src/styles.css`) riprende la corda del logo. Ha i colori del gruppo, presi dall'anello del
+  logo: giallo `#ffff00` e blu `#0046c6`. Sono le variabili `--giallo-gruppo` e `--blu-gruppo`,
+  uguali in tema chiaro e scuro.
 
 ### Lingua e tema
 

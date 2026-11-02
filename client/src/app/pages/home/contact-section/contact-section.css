@@ -21,6 +21,15 @@ p-card {
   font-weight: 700;
   overflow-wrap: anywhere;
 }
+.instagram a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+}
+.instagram .pi {
+  font-size: 1.1rem;
+}
 .nota {
   color: var(--testo-tenue);
   font-size: 1rem;

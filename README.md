@@ -78,6 +78,9 @@ solo un'anteprima.
 
 Il footer resta in fondo alla finestra anche nelle pagine con poco contenuto (`app.ts`).
 
+Per i motori di ricerca ci sono `client/public/robots.txt`, che indica la sitemap e
+esclude la pagina "non trovata", e `client/public/sitemap.xml`, con l'elenco delle pagine.
+
 I profili social della pagina Contatti sono un elenco in `contact-page.ts`: per aggiungerne uno
 basta una riga con nome, indirizzo e icona di PrimeIcons.
 
@@ -316,7 +319,9 @@ per evitare un lampo chiaro in modalità scura. Ci pensano due accorgimenti:
 
 1. Crea il componente in `client/src/app/pages/`.
 2. Aggiungi la route in `client/src/app/app.routes.ts`.
-3. Non serve altro: `app.routes.server.ts` pre-renderizza tutte le route. Le route con parametri,
+3. Aggiungi l'indirizzo in `client/public/sitemap.xml`, con la barra finale (per esempio
+   `https://pd6.it/nuova-pagina/`): è la forma con cui Cloudflare serve le pagine.
+4. Non serve altro: `app.routes.server.ts` pre-renderizza tutte le route. Le route con parametri,
    per esempio `/eventi/:id`, richiedono invece `getPrerenderParams` per elencare i valori da
    generare.
 

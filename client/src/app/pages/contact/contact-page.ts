@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslocoDirective } from '@jsverse/transloco';
+import { RevealOnScroll } from '../../shared/reveal-on-scroll';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-contact-page',
-  imports: [TranslocoDirective, ButtonModule],
+  imports: [TranslocoDirective, ButtonModule, RevealOnScroll],
   templateUrl: './contact-page.html',
   styleUrl: './contact-page.css',
 })

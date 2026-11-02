@@ -3,7 +3,7 @@
     <div class="wrap">
       <h2 id="intro-titolo">{{ t('title') }}</h2>
       <p class="lead">{{ t('text') }}</p>
-      <dl class="numeri">
+      <dl class="numeri anima-figli" appRevealOnScroll>
         @for (fact of facts; track fact) {
           <div>
             <dt>{{ t('facts.' + fact + '.value') }}</dt>
@@ -16,7 +16,7 @@
   <section class="sezione" aria-labelledby="scopri-titolo">
     <div class="wrap">
       <h2 id="scopri-titolo">{{ t('more') }}</h2>
-      <ul class="griglia griglia--4">
+      <ul class="griglia griglia--4 anima-figli" appRevealOnScroll>
         @for (card of cards; track card.key) {
           <li>
             <a class="scheda scheda--link" [routerLink]="card.link">

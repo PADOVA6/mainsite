@@ -105,16 +105,37 @@
     stroke-linecap: round;
     stroke-dasharray: 0.1 9;
   }
-  .reveal-ready .tracciato {
+  :host-context(.anim) .reveal-ready .tracciato {
     clip-path: inset(0 100% 0 0);
+  }
+  :host-context(.anim) .reveal-ready.visto .tracciato {
+    clip-path: inset(0);
     transition: clip-path 1.8s cubic-bezier(0.45, 0.05, 0.3, 1);
   }
-  .reveal-ready.visto .tracciato {
-    clip-path: inset(0);
-  }
+}
+/* Le tappe compaiono una dopo l'altra, mentre il tracciato le raggiunge */
+:host-context(.anim) .reveal-ready .cammino li {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+:host-context(.anim) .reveal-ready.visto .cammino li {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+:host-context(.anim) .reveal-ready.visto .cammino li:nth-child(1) {
+  transition-delay: 0.25s;
+}
+:host-context(.anim) .reveal-ready.visto .cammino li:nth-child(2) {
+  transition-delay: 0.85s;
+}
+:host-context(.anim) .reveal-ready.visto .cammino li:nth-child(3) {
+  transition-delay: 1.45s;
 }
 @media (prefers-reduced-motion: reduce) {
-  .reveal-ready .tracciato {
+  :host-context(.anim) .reveal-ready .tracciato {
     transition: none;
     clip-path: inset(0);
   }

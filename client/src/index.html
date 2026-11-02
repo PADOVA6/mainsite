@@ -46,6 +46,24 @@
           if (dark) document.documentElement.classList.add('my-app-dark');
         } catch (e) {}
       })();
+      // Animazioni allo scorrimento: la classe "anim" nasconde gli elementi da animare fin dal primo
+      // disegno, così quelli già sullo schermo non spariscono e ricompaiono quando parte Angular.
+      // Senza JavaScript o con il movimento ridotto non viene aggiunta e tutto resta visibile.
+      // Se Angular non parte entro 4 secondi (anim-pronta, in app.ts), la togliamo.
+      (function () {
+        try {
+          var root = document.documentElement;
+          if (
+            'IntersectionObserver' in window &&
+            !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ) {
+            root.classList.add('anim');
+            setTimeout(function () {
+              if (!root.classList.contains('anim-pronta')) root.classList.remove('anim');
+            }, 4000);
+          }
+        } catch (e) {}
+      })();
     </script>
   </head>
   <body>

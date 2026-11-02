@@ -29,7 +29,8 @@ Non sono ancora configurati runner per test unitari o end-to-end.
 - [ContactPage](src/app/pages/contact/contact-page.ts): dove ci troviamo, scrivici, seguici.
   I profili social sono un elenco nel componente.
 - [RevealOnScroll](src/app/shared/reveal-on-scroll.ts) gestisce
-  le animazioni allo scorrimento (soglia regolabile con `revealThreshold`) con cleanup dell'observer e rispetto del movimento ridotto.
+  le animazioni allo scorrimento (soglia regolabile con `revealThreshold`), insieme alle classi
+  `anima` e `anima-figli` di `styles.css` e alla classe `anim` che `index.html` mette su `<html>`.
 - [SiteFooter](src/app/layout/site-footer/site-footer.ts) appartiene al layout comune:
   mantiene testi italiani, collegamenti e stili del footer HTML originale, anche nelle altre lingue.
 - [SiteNavbar](src/app/layout/site-navbar/site-navbar.ts) offre link alle pagine Chi siamo, Missione, Il cammino e Contatti,

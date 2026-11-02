@@ -4,6 +4,8 @@
   "compatibility_date": "2026-11-01",
   "assets": {
     // i file del sito sono nella cartella docs
-    "directory": "./docs"
+    "directory": "./docs",
+    // per gli indirizzi inesistenti serve docs/404.html (la pagina "non trovata" pre-renderizzata)
+    "not_found_handling": "404-page"
   }
 }

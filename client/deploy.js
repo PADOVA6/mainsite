@@ -21,7 +21,13 @@ function _exec(cmd) {
     console.log('Building project...');
     await _exec('ng build --output-path docs --base-href /');
     console.log('Built, ready to deploy');
-    fs.copyFileSync('docs/browser/index.html', 'docs/browser/404.html');
+    // Con la pre-renderizzazione la 404 deve essere la pagina "non trovata", non la home:
+    // altrimenti l'HTML servito non corrisponde alla pagina che Angular idrata.
+    const notFoundPage = 'docs/browser/page-not-found/index.html';
+    fs.copyFileSync(
+      fs.existsSync(notFoundPage) ? notFoundPage : 'docs/browser/index.html',
+      'docs/browser/404.html',
+    );
     console.log('Files copied');
     const targetDocsDir = path.join(currentDir, '..', 'docs');
     if (fs.existsSync(targetDocsDir)) {

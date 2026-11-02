@@ -276,8 +276,18 @@ Ci sono tre modi per evitarlo, già usati nel progetto:
   `RevealOnScroll`;
 - accedere al documento con `inject(DOCUMENT)` invece della variabile globale `document`.
 
-La pagina pre-renderizzata è sempre in italiano e con tema chiaro. Lingua e tema del visitatore
-vengono applicati subito dopo, nel browser.
+La pagina pre-renderizzata è sempre in italiano e con tema chiaro. La lingua del visitatore viene
+applicata da Angular, appena caricato. Il tema invece viene applicato prima che la pagina compaia,
+per evitare un lampo chiaro in modalità scura. Ci pensano due accorgimenti:
+
+- lo script in `<head>` di `src/index.html`, che aggiunge `my-app-dark` prima del primo
+  disegno, con la stessa logica di `ThemeService`;
+- in `angular.json`, `optimization.styles.inlineCritical: false` nella configurazione
+  `production`. Con l'impostazione predefinita Angular inserisce nella pagina solo il CSS
+  "critico", calcolato sull'HTML pre-renderizzato (cioè chiaro). Il resto del CSS lo carica in
+  ritardo, comprese le regole del tema scuro e del font di riserva. Così il primo disegno avviene
+  con colori chiari e font di sistema. Con `false` il foglio di stile è uno solo e la pagina
+  compare solo quando è caricato: pesa circa 6 kB compresso.
 
 ### Aggiungere una pagina
 

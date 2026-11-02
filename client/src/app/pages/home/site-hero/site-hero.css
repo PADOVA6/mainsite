@@ -58,6 +58,15 @@ h1 {
   font-size: 1rem;
   font-weight: 700;
 }
+.foto-crediti {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.75rem;
+  color: var(--testo-tenue);
+}
+.foto-crediti a {
+  color: inherit;
+}
 @media (min-width: 60rem) {
   .wrap {
     grid-template-columns: 1.15fr 1fr;

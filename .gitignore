@@ -7,3 +7,6 @@
 .wrangler/
 .dev.vars*
 .env*
+
+# File generati da Husky; l'hook pre-commit resta versionato
+/.husky/_/

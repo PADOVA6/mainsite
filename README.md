@@ -160,6 +160,19 @@ Per formattare il codice prima di un commit:
 npx prettier --write src
 ```
 
+Per controllare TypeScript e template Angular (anche l'accessibilita'):
+
+```bash
+npm run lint
+npm run lint:fix
+```
+
+`npm ci` (o `npm install`) in `client` installa anche l'hook pre-commit tramite Husky.
+Ogni commit locale esegue il lint completo: errori e warning bloccano il commit.
+L'hook non corregge i file e non cambia lo staging; `lint:fix` applica manualmente le correzioni
+automatiche disponibili. Node.js/npm devono essere nel PATH anche per i commit dall'editor.
+Gli hook locali non si applicano alle modifiche effettuate dal sito GitHub.
+
 ## Build
 
 ```bash

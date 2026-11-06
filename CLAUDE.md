@@ -54,3 +54,6 @@ sono nel [README](README.md); qui c'è quello che serve ricordare tra una sessio
 - Il codice gira anche durante la pre-renderizzazione: niente `window`, `localStorage` o
   `matchMedia` diretti (vedi README, "Pre-renderizzazione").
 - Repository pubblico: mai segreti o chiavi nel codice.
+- Non creare pagine di codice più lunghe di 200 righe, utilizza più componenti e fai in modo che
+  ogni componente sia Single-purpose e che renda lo sviluppo e l'eventuale cambio di developer
+  sostenibile e comprensibile.

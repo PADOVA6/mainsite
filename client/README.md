@@ -15,6 +15,23 @@ Non serve fare il build prima di committare: lo esegue Cloudflare a ogni push
 (vedi il [README principale](../README.md)).
 Non sono ancora configurati runner per test unitari o end-to-end.
 
+## Lint e commit
+
+```bash
+npm run lint
+npm run lint:fix
+```
+
+ESLint controlla i file TypeScript e i template Angular, inclusi quelli inline, con le regole
+raccomandate e i controlli di accessibilita' dei template. Errori e warning fanno fallire il check.
+`lint:fix` applica le correzioni automatiche disponibili; Prettier resta separato dal lint.
+
+`npm install` e `npm ci` configurano automaticamente Husky tramite lo script `prepare`.
+Prima di ogni commit locale, l'hook `.husky/pre-commit` nella radice esegue il lint completo
+del client e blocca il commit se fallisce, senza modificare o aggiungere file allo staging.
+Serve Node.js/npm nel PATH anche quando si committa dall'editor.
+Gli hook sono locali e non vengono eseguiti per le modifiche fatte dall'interfaccia web di GitHub.
+
 ## Struttura
 
 - [Home](src/app/pages/home/home.ts): testata ([SiteHero](src/app/pages/home/site-hero/site-hero.ts))

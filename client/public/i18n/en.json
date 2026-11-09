@@ -273,17 +273,15 @@
   },
   "contacts": {
     "title": "Contact us",
-    "lead": "For information and registration, the easiest way is to send us an email.",
+    "lead": "Here you will find our contact details, parish address and Instagram profile.",
     "location": {
       "title": "Where to find us",
       "parish": "Parish of Cristo Re",
-      "map": "Open the map"
+      "mapTitle": "Map of the Parish of Cristo Re in Padua"
     },
     "write": {
       "title": "Write to us",
-      "intro": "For information and registration",
-      "official": "For official correspondence: certified email (PEC)",
-      "parishPage": "Our group on the parish website"
+      "pec": "Certified email (PEC)"
     },
     "follow": {
       "title": "Follow us",

@@ -9,6 +9,60 @@
   <main id="contenuto" tabindex="-1">
     <section class="sezione sezione--lavanda">
       <div class="wrap blocchi">
+        <article
+          class="scheda anima"
+          appRevealOnScroll
+          id="scrivici"
+          aria-labelledby="scrivici-titolo"
+        >
+          <h2 id="scrivici-titolo">{{ t('write.title') }}</h2>
+          <ul class="azioni-contatti">
+            <li>
+              <a
+                class="contatto-pulsante contatto-pulsante--primario"
+                href="mailto:padova6@veneto.agesci.it"
+              >
+                <span class="pi pi-envelope" aria-hidden="true"></span>
+                <span class="contatto-pulsante__indirizzo">padova6&#64;veneto.agesci.it</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contatto-pulsante"
+                href="mailto:padova6@pec.agesci.it"
+                [attr.title]="t('write.pec')"
+              >
+                <span class="pi pi-envelope" aria-hidden="true"></span>
+                <span class="contatto-pulsante__dettagli">
+                  <strong>{{ t('write.pec') }}</strong>
+                  <span>padova6&#64;pec.agesci.it</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <h3 id="seguici" class="seguici-titolo">{{ t('follow.title') }}</h3>
+          <ul class="azioni-contatti">
+            @for (social of socials; track social.name) {
+              <li>
+                <a
+                  class="contatto-pulsante"
+                  [href]="social.url"
+                  [attr.aria-label]="t('follow.on', { name: social.name })"
+                  [title]="t('follow.on', { name: social.name })"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span [class]="social.icon" aria-hidden="true"></span>
+                  <span class="contatto-pulsante__dettagli">
+                    <strong>{{ social.name }}</strong>
+                    <span>{{ social.handle }}</span>
+                  </span>
+                  <span class="pi pi-arrow-up-right contatto-pulsante__freccia" aria-hidden="true"></span>
+                </a>
+              </li>
+            }
+          </ul>
+        </article>
         <article class="scheda anima" appRevealOnScroll id="dove" aria-labelledby="dove-titolo">
           <h2 id="dove-titolo">{{ t('location.title') }}</h2>
           <address class="indirizzo">
@@ -17,55 +71,15 @@
             Via Sant’Osvaldo 4<br />
             35127 Padova
           </address>
-          <p class="azioni">
-            <a
-              pButton
-              href="https://www.openstreetmap.org/search?query=Via%20Sant%27Osvaldo%204%2C%2035127%20Padova"
-            >
-              <span class="pi pi-map-marker" aria-hidden="true"></span>
-              <span pButtonLabel>{{ t('location.map') }}</span>
-            </a>
-          </p>
-        </article>
-        <article
-          class="scheda anima"
-          appRevealOnScroll
-          id="scrivici"
-          aria-labelledby="scrivici-titolo"
-        >
-          <h2 id="scrivici-titolo">{{ t('write.title') }}</h2>
-          <p class="etichetta">{{ t('write.intro') }}</p>
-          <p>
-            <a class="email" href="mailto:padova6@veneto.agesci.it">padova6&#64;veneto.agesci.it</a>
-          </p>
-          <p class="nota">
-            {{ t('write.official') }}
-            <a href="mailto:padova6@pec.agesci.it">padova6&#64;pec.agesci.it</a>
-          </p>
-          <p class="parrocchia">
-            <a href="https://cristorepd.it/scout-padova-6/">{{ t('write.parishPage') }}</a>
-          </p>
-        </article>
-        <article
-          class="scheda anima"
-          appRevealOnScroll
-          id="seguici"
-          aria-labelledby="seguici-titolo"
-        >
-          <h2 id="seguici-titolo">{{ t('follow.title') }}</h2>
-          <ul class="social">
-            @for (social of socials; track social.name) {
-              <li>
-                <a
-                  class="social-link"
-                  [href]="social.url"
-                  [attr.aria-label]="t('follow.on', { name: social.name })"
-                  [title]="t('follow.on', { name: social.name })"
-                  ><span [class]="social.icon" aria-hidden="true"></span
-                ></a>
-              </li>
-            }
-          </ul>
+          <div class="mappa">
+            <iframe
+              src="https://www.google.com/maps?q=Parrocchia+di+Cristo+Re,+Via+Sant%27Osvaldo+4,+35127+Padova&output=embed"
+              [title]="t('location.mapTitle')"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
         </article>
       </div>
     </section>

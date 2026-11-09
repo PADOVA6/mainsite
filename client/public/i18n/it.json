@@ -273,17 +273,15 @@
   },
   "contacts": {
     "title": "Contatti",
-    "lead": "Per informazioni e iscrizioni il modo più semplice è scriverci un’email.",
+    "lead": "Qui trovi i recapiti, la parrocchia e il profilo Instagram del gruppo.",
     "location": {
       "title": "Dove ci troviamo",
       "parish": "Parrocchia di Cristo Re",
-      "map": "Apri la mappa"
+      "mapTitle": "Mappa della parrocchia di Cristo Re a Padova"
     },
     "write": {
       "title": "Scrivici",
-      "intro": "Per informazioni e iscrizioni",
-      "official": "Per comunicazioni ufficiali: PEC",
-      "parishPage": "La pagina del gruppo sul sito della parrocchia"
+      "pec": "Posta certificata (PEC)"
     },
     "follow": {
       "title": "Seguici",

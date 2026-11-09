@@ -10,3 +10,5 @@
 
 # File generati da Husky; l'hook pre-commit resta versionato
 /.husky/_/
+
+.playwright-mcp
